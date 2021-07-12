@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
     <head>
+        <!-- lien page github : https://jeromegdev.github.io/JeromeGEOFFROY_P2_110620211/ -->
         <meta charset="utf-8" />
-            <link rel="stylesheet" media="screen and (min-width: 500px)" href="style.css">
-            <link rel="stylesheet" media="screen and (max-width: 500px)" href="responsive.css">
+            <link rel="stylesheet" media="all" href="responsive.css" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>Accueil Reservia - Site de réservation en ligne</title>
         <meta name="desciption" content="Réservia est le site de réservation en ligne qui vous permettra d'organiser et de profiter au mieux de vos vacances" />
         <meta name="keywords" content="réservation,reservations,réserver,reserver,en ligne,réservation en ligne,reservation en ligne,réserver en ligne,reserver en ligne,voyage,séjour,vacances,location,locations,hôtel,hôtels,hotel,hotels,chambre,chambres,à louer," />
@@ -14,12 +15,10 @@
             <div class="page">
                 <header>
                     <div class="grid header-top">
-                            
                         <nav>
-                            
                             <ul class="navigation">
-                                <li><a href="index.html" title="retour à l'accueil"><img class="logo" src="img/logo/Reservia.svg" alt="logo_Reservia" title="logo Réservia" /></a></li>
-                                <li class="nav-button navhebergement"><a class="nav-link" href="#hebergements">Hebergement</a></li>
+                                <li><a href="index.html" title="retour à l'accueil"><img class="logo" src="img/logo/reservia.png" alt="logo_Reservia" title="logo Réservia" /></a></li>
+                                <li class="nav-button navhebergement"><a class="nav-link" href="#hebergements">Hébergements</a></li>
                                 <li class="nav-button navactivites"><a class="nav-link" href="#activites">Activités</a></li>
                                 <li class="nav-button navinscription"><a id="inscription" class="nav-link" href="index.html">S'inscrire</a></li>
                             </ul>
@@ -32,8 +31,8 @@
                         </div>
                         <div class="search-bar">
                             <form method="post" action="traitementrecherche.php">
-                                <i class="searchfont search-i fas fa-map-marker-alt"></i><input type="text" placeholder="Marseille, France" maxlength="10" name="rechercher" id="Rechercher" class="searchfield searchfont" style="color:black" size="18" />
-                                <label for="Rechercher" class="searchfont" id="Recherchertxt"><i class="fas fa-search"></i></label>                            
+                                <div class="fa-cont fa-btn"><i class="searchfont search-i fas fa-map-marker-alt"></i></div><input type="text" placeholder="Marseille, France" maxlength="10" name="rechercher" id="Rechercher" class="searchfield searchfont" style="color:black" size="18" />
+                                <div class="fa-cont fa-btn"><label for="Rechercher" class="searchfont" id="Recherchertxt"><a href="index.html"><span class="desktop-txt">Rechercher</span><i class="fas fa-search fa-smart"></i></a></label></div>
                             </form>
                         </div>
                         <div id="filtres">
@@ -60,78 +59,90 @@
                     </div>
                 </header>
                 <!-- -->
-                <div class="category-blocks" id="category-frames">
-                    <div class="block-hebergements">
+            <section>
+                <div class="sections-blocks">
+                    <div class="section-hbgt">
                         <!-- Bloc d'affichage des hébergements -->
-                        <div class="block-category"  id="hebergements">
+                        <div class="category-hbgt"  id="hebergements">
                             <!-- "accommodation" title (Titre "hébergements" -->
                             <div class="category-title">
-                                <h2 >Hébergements à Marseille.</h2>
+                                <h2 >Hébergements à Marseille</h2>
                             </div>
-                            <!-- First lign of 3 frame - cadre "Hébergement" : Première ligne de 3 cadres -->
-                            <div class="grid-product-block">
-                                <div class="product-block pb-left pb-top">
-                                    <img class="p-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-auberge-la-cannebiere-4.jpg" title="Auberge de la Cannebiere" alt="auberge_de_la_cannebiere" />
-                                    <div class="product-infos">
-                                        <h4 class="product-title">Auberge la Cannebière"</h4>
-                                        <div class="product-desc"><p>Nuit à partir de <strong>25€</strong></p>
+                            <div class="block-hbgt-block">
+                                <div class="hbgt-block">
+                                    <div class="imagecontainer-hbgt">
+                                        <img class="image-hbgt" src="img/hebergements/4_small/hergement-ville-marseille-auberge-la-cannebiere-4.jpg" title="Auberge de la Cannebiere" alt="auberge_de_la_cannebiere" />
+                                    </div>
+                                    <div class="hbgt-block-infos">
+                                        <h4 class="hbgt-title">Auberge la Cannebière"</h4>
+                                        <div class="hbgt-desc"><p>Nuit à partir de <strong>25€</strong></p>
                                         </div>
-                                        <div class="productrating">
+                                        <div class="hbgt-rating">
                                             <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-block pb-center pb-top pb-middle">
-                                    <img class="p-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-hotel-du-port-4.jpg" title="Hotel du port" alt="hotel-du-port" />
-                                    <div class="product-infos">
-                                        <h4 class="product-title">Hôtel du Port</h4>
-                                        <div class="product-desc"><p>Nuit à partir de <strong>52€</strong></p>
+                                <div class="hbgt-block">
+                                    <div class="imagecontainer-hbgt">
+                                        <img class="image-hbgt" src="img/hebergements/4_small/hergement-ville-marseille-hotel-du-port-4.jpg" title="Hotel du port" alt="hotel-du-port" />
+                                    </div>
+                                    <div class="hbgt-block-infos">
+                                        <h4 class="hbgt-title">Hôtel du Port</h4>
+                                        <div class="hbgt-desc"><p>Nuit à partir de <strong>52€</strong></p>
                                         </div>
-                                        <div class="productrating">
+                                        <div class="hbgt-rating">
                                             <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-block pb-right pb-top pb-middle">
-                                    <img class="p-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-hôtel-les-mouettes-4.jpg" title="Hotel Les Mouettes" alt="hotel-les-mouettes" />
-                                    <div class="product-infos">
-                                        <h4 class="product-title">Hôtel Les Mouettes</h4>
-                                        <div class="product-desc"><p>Nuit à partir de <strong>76€</strong></p>
+                                <div class="hbgt-block">
+                                    <div class="imagecontainer-hbgt">
+                                        <img class="image-hbgt" src="img/hebergements/4_small/hergement-ville-marseille-hôtel-les-mouettes-4.jpg" title="Hotel Les Mouettes" alt="hotel-les-mouettes" />
+                                    </div>
+                                    <div class="hbgt-block-infos">
+                                        <h4 class="hbgt-title">Hôtel Les Mouettes</h4>
+                                        <div class="hbgt-desc"><p>Nuit à partir de <strong>76€</strong></p>
                                         </div>
-                                        <div class="productrating">
+                                        <div class="hbgt-rating">
                                             <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-block pb-left pb-bottom pb-middle">
-                                    <img class="p-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-hotel-de-la-mer-4.jpg" title="Hotel de la mer" alt="hotel-de-la-mer" />
-                                    <div class="product-infos">
-                                        <h4 class="product-title">Hôtel de la mer</h4>
-                                        <div class="product-desc"><p>Nuit à partir de <strong>46€</strong></p>
+                                <div class="hbgt-block">
+                                    <div class="imagecontainer-hbgt">
+                                        <img class="image-hbgt" src="img/hebergements/4_small/hergement-ville-marseille-hotel-de-la-mer-4.jpg" title="Hotel de la mer" alt="hotel-de-la-mer" />
+                                    </div>
+                                    <div class="hbgt-block-infos">
+                                        <h4 class="hbgt-title">Hôtel de la mer</h4>
+                                        <div class="hbgt-desc"><p>Nuit à partir de <strong>46€</strong></p>
                                         </div>
-                                        <div class="productrating">
+                                        <div class="hbgt-rating">
                                             <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star star"></i><i class="fas fa-star"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-block pb-center pb-bottom pb-middle">
-                                    <img class="p-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-auberge-le-panier-4.jpg" title="Auberge le Panier" alt="auberge-le-panier" />
-                                    <div class="product-infos">
-                                        <h4 class="product-title">Auberge Le Panier</h4>
-                                        <div class="product-desc"><p>Nuit à partir de <strong>23€</strong></p>
+                                <div class="hbgt-block">
+                                    <div class="imagecontainer-hbgt">
+                                        <img class="image-hbgt" src="img/hebergements/4_small/hergement-ville-marseille-auberge-le-panier-4.jpg" title="Auberge le Panier" alt="auberge-le-panier" />
+                                    </div>
+                                    <div class="hbgt-block-infos">
+                                        <h4 class="hbgt-title">Auberge Le Panier</h4>
+                                        <div class="hbgt-desc"><p>Nuit à partir de <strong>23€</strong></p>
                                         </div>
-                                        <div class="productrating">
+                                        <div class="hbgt-rating">
                                             <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star"></i>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="product-block pb-right pb-bottom">
-                                    <img class="p-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-hotel-chez-amina-4.jpg" title="Hotel Chez Amina" alt="hotel--chez-amina" />
-                                    <div class="product-infos">
-                                        <h4 class="product-title">Hôtel Chez Amina</h4>
-                                        <div class="product-desc"><p>Nuit à partir de <strong>96€</strong></p>
+                                <div class="hbgt-block">
+                                    <div class="imagecontainer-hbgt">
+                                    <img class="image-hbgt" src="img/hebergements/4_small/hergement-ville-marseille-hotel-chez-amina-4.jpg" title="Hotel Chez Amina" alt="hotel--chez-amina" />
                                         </div>
-                                        <div class="productrating">
+                                    <div class="hbgt-block-infos">
+                                        <h4 class="hbgt-title">Hôtel Chez Amina</h4>
+                                        <div class="hbgt-desc"><p>Nuit à partir de <strong>96€</strong></p>
+                                        </div>
+                                        <div class="hbgt-rating">
                                             <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i>
                                         </div>
                                     </div>
@@ -142,116 +153,139 @@
                                     <h4><a href="index.html">Afficher plus</a></h4>
                             </div>
                         </div>
-                    </div>
+                    </div>                            
                     <!-- "Most popular" frame (also called "Featured" here) - central grid 1 - 2nd frame: bootstrap occupies 4 out of 12 squares -->
                     <!-- "cadre "les plus populaires" (également appelé "En vedette" ici) - grille centrale 1 - 2e cadre : bootstrap occupe 4 cases sur 12 -->
-                    <div class="featuredsmart">
-                    <div class="block-category"  id="featured">
-                        <!--"most popular" header: divided into 2 8/4 portions:
-                            Title "most popular on a line of length 8,
-                            then a box of length 4 to place the graphic icon-->
-
-                        <!--entête cadre "les plus populaires"  : divisé en 2 portions 8/4 :
-                            Titre "les plus populaire sur une ligne de longueur 8,
-                            puis une case de longeur 4 pour placer l'icone graphique"-->
-                            <div class="featured-product-header">
-                                <h2>Les plus populaires.</h2>
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                        <!-- Most popular settings - 1st lodging - Cadre les plus populaires - 1er logement -->
-                        <div class="featured-product-block fptop">
-                            <div class="fpimg">
-                                <img class="fp-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-hotel-le-soleil-du-matin-4.jpg" title="Hôtel le Soleil du matin" alt="hotel-le-soleil-du-matin" />
-                            </div>
-                                <div class="featured-product-infos">
-                                    <h4 class="product-title">Hôtel Le Soleil du Matin</h4>
-                                    <div class="product-desc"><p>Nuit à partir de <strong>128€</strong></p>
+                    <div class="section-lpp">
+                        <div class="category-lpp"  id="populaires">
+                            <!--"most popular" header: divided into 2 8/4 portions:
+                                Title "most popular on a line of length 8,
+                                then a box of length 4 to place the graphic icon-->
+                                
+                            <!--entête cadre "les plus populaires"  : divisé en 2 portions 8/4 :
+                                Titre "les plus populaire sur une ligne de longueur 8,
+                                puis une case de longeur 4 pour placer l'icone graphique"-->
+                                <div class="lpp-header">
+                                    <h2>Les plus populaires</h2>
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="block-lpp-block">
+                                <!-- Most popular settings - 1st lodging - Cadre les plus populaires - 1er logement -->
+                                <div class="lpp-block">
+                                    <div class="imagecontainer-lpp">
+                                        <img class="image-lpp" src="img/hebergements/4_small/hergement-ville-marseille-hotel-le-soleil-du-matin-4.jpg" title="Hôtel le Soleil du matin" alt="hotel-le-soleil-du-matin" />
                                     </div>
-                                    <div class="productrating">
-                                    <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-starok"></i>
+                                        <div class="lpp-block-infos">
+                                            <h4 class="hbgt-title">Hôtel Le Soleil du Matin</h4>
+                                            <div class="hbgt-desc"><p>Nuit à partir de <strong>128€</strong></p>
+                                            </div>
+                                            <div class="lpp-rating">
+                                            <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-starok"></i>
+                                            </div>
+                                        </div>
+                                </div>
+                                <!-- Most popular settings - 2nd lodging - Cadre les plus populaires - 2e logement -->
+                                <div class="lpp-block">
+                                    <div class="imagecontainer-lpp">
+                                        <img class="image-lpp" src="img/hebergements/4_small/hergement-ville-marseille-chambre-d_hotes_au-coeur-de-l_eau-4.jpg" title="Au coeur de l'eau Chambre d'hôtes" alt="au-coeur-de-l_eau-chambres-d_hotes" />
+                                    </div>
+                                    <div class="lpp-block-infos">
+                                            <h4 class="hbgt-title">Au coeur de l'eau Chambres d'hôtes</h4>
+                                            <div class="hbgt-desc"><p>Nuit à partir de <strong>71€</strong></p>
+                                            </div>
+                                            <div class="lpp-rating">
+                                                <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star"></i>
+                                            </div>
                                     </div>
                                 </div>
-                        </div>
-                        <!-- Most popular settings - 2nd lodging - Cadre les plus populaires - 2e logement -->
-                        <div class="featured-product-block fpmiddle">
-                            <div class="fpimg">
-                                <img class="fp-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-chambre-d_hotes_au-coeur-de-l_eau-4.jpg" title="Au coeur de l'eau Chambre d'hôtes" alt="au-coeur-de-l_eau-chambres-d_hotes" />
-                            </div>
-                            <div class="featured-product-infos">
-                                    <h4 class="product-title">Au coeur de l'eau Chambres d'hôtes</h4>
-                                    <div class="product-desc"><p>Nuit à partir de <strong>71€</strong></p>
+                                <!-- Most popular settings - 3rd lodging - Cadre les plus populaires - 3e logement -->
+                                <div class="lpp-block">
+                                    <div class="imagecontainer-lpp">
+                                        <img class="image-lpp" src="img/hebergements/4_small/hergement-ville-marseille-hotel-tout-bleu-et-blanc-4.jpg" title="Hôtel Tout bleu et blanc" alt="hotel-tout-bleu-et-blanc" />
                                     </div>
-                                    <div class="productrating">
-                                        <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star"></i>
-                                    </div>
-                            </div>
-                        </div>
-                        <!-- Most popular settings - 3rd lodging - Cadre les plus populaires - 3e logement -->
-                        <div class="featured-product-block fpbottom">
-                            <div class="fpimg">
-                                <img class="fp-img-mini" src="img/hebergements/4_small/hergement-ville-marseille-hotel-tout-bleu-et-blanc-4.jpg" title="Hôtel Tout bleu et blanc" alt="hotel-tout-bleu-et-blanc" />
-                            </div>
-                                <div class="featured-product-infos">
-                                    <h4 class="product-title">Hôtel Tout bleu et blanc</h4>
-                                    <div class="product-desc"><p>Nuit à partir de <strong>68€</strong></p>
-                                    </div>
-                                    <div class="productrating">
-                                        <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star"></i>
-                                    </div>
+                                        <div class="lpp-block-infos">
+                                            <h4 class="hbgt-title">Hôtel Tout bleu et blanc</h4>
+                                            <div class="hbgt-desc"><p>Nuit à partir de <strong>68€</strong></p>
+                                            </div>
+                                            <div class="lpp-rating">
+                                                <i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star starok"></i><i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>           
+
+                        
                 <!--cadre des activités : une ligne de longueur 12 cases, qui contient 4 cadres de longueur 3 cases -->
-                <div class="category-blocks" id="activites">
+                <div class="section-actvt">
                     <!--Titre du cadre - de longueur 12 cases -->
-                    <div class="category-title activite-title">
+                    <div class="category-title"  id="activites">
                         <h2>Activites à Marseille</h2>
                     </div>
-                    <div class="activites-list">
-                        <div class="bacolumn baleft">
-                            <div class="bloc-activites">
-                                <img class="activite-img-mini" src="img/activites/4_small/activites-marseille-vieux-port-4.jpg" alt="vieux_port" />
-                                <h3 class="product-title actitle">Vieux Port.</h3>
+                    <div class="block-actvt-block">
+                        <div class=".block-actvt-1row">
+                            <div class="actvt-block">
+                                <div class="imagecontainer-actvt">
+                                    <img class="image-actvt dktpaimg" src="img/activites/4_small/activites-marseille-vieux-port-4.jpg" alt="vieux_port" />
+                                    <img class="image-actvt smartaimg" src="img/activites/4_small-resized/activites-marseille-vieux-port-4.jpg" alt="vieux_port" />
+                                </div>
+                                <h3 class="actitle">Vieux Port.</h3>
                             </div>
                         </div>
-                        <div class="bacolumn">
+                        <div class="block-actvt-2rows">
                             <div class="batop">
-                                <div class=" bloc-activites">
-                                    <img class="activite-img-mini" src="img/activites/4_small/activites-marseille-fort-de-pomegues-4.jpg" alt="fort_de_pomegues" />
-                                    <h3 class="product-title actitle">Fort de Pomègues.</h3>
+                                <div class="actvt-block">
+                                    <div class="imagecontainer-actvt">
+                                        <img class="image-actvt dktpaimg" src="img/activites/4_small/activites-marseille-fort-de-pomegues-4.jpg" alt="fort_de_pomegues" />
+                                        <img class="image-actvt smartaimg" src="img/activites/4_small-resized/activites-marseille-fort-de-pomegues-4.jpg" alt="fort_de_pomegues" />
+                                    </div>
+                                    <h3 class="actitle">Fort de Pomègues.</h3>
                                 </div>
                             </div>
                             <div class="babottom">
-                                <div class="bloc-activites">
-                                    <img class="activite-img-mini" src="img/activites/4_small/activites-marseille-iles-du-frioul-4.jpg" alt="iles_du_frioul" />
-                                    <h3 class="product-title actitle">Iles du Frioul.</h3>
+                                <div class="actvt-block">
+                                    <div class="imagecontainer-actvt">
+                                        <img class="image-actvt dktpaimg" src="img/activites/4_small/activites-marseille-iles-du-frioul-4.jpg" alt="iles_du_frioul" />
+                                        <img class="image-actvt smartaimg" src="img/activites/4_small-resized/activites-marseille-iles-du-frioul-4.jpg" alt="iles_du_frioul" />
+                                    </div>
+                                    <h3 class=" actitle">Iles du Frioul.</h3>
                                 </div>
                             </div>
                         </div>
-                        <div class="bacolumn">
-                            <div class="bloc-activites">
-                                <img class="activite-img-mini" src="img/activites/4_small/activites-marseille-parc-national-des-calanques-4.jpg" alt="parc_national_des_calanques" />
-                                <h3 class="product-title actitle">Parc National des Calanques.</h3>
+                        <div class=".block-actvt-1row">
+                            <div class="actvt-block">
+                                <div class="imagecontainer-actvt">
+                                    <img class="image-actvt dktpaimg" src="img/activites/4_small/activites-marseille-parc-national-des-calanques-4.jpg" alt="parc_national_des_calanques" />
+                                    <img class="image-actvt smartaimg" src="img/activites/4_small-resized/activites-marseille-parc-national-des-calanques-4.jpg" alt="parc_national_des_calanques" />
+                                </div>
+                                <h3 class="actitle">Parc National des Calanques.</h3>
                             </div>
                         </div>
-                        <div class="bacolumn baright">
+                        <div class="block-actvt-2rows">
                             <div class="batop">
-                                <div class="bloc-activites">
-                                    <img class="activite-img-mini" src="img/activites/4_small/activite-marseille-Notre-dame-de-la-garde-4.jpg" alt="notre_dame_de_la_garde" />
-                                    <h3 class="product-title actitle">Notre-Dame de la Garde.</h3>
+                                <div class="actvt-block">
+                                    <div class="imagecontainer-actvt">
+                                        <img class="image-actvt dktpaimg" src="img/activites/4_small/activite-marseille-Notre-dame-de-la-garde-4.jpg" alt="notre_dame_de_la_garde" />
+                                        <img class="image-actvt smartaimg" src="img/activites/4_small-resized/activite-marseille-Notre-dame-de-la-garde-4.jpg" alt="notre_dame_de_la_garde" />
+                                    </div>
+                                    <h3 class=" actitle">Notre-Dame de la Garde.</h3>
                                 </div>
                             </div>
                             <div class="babottom">
-                                <div class="bloc-activites">
-                                    <img class="activite-img-mini" src="img/activites/4_small/activites-marseille-parc-longchamp-4.jpg" alt="parc_longchamp" />
-                                    <h3 class="product-title actitle">Parc Longchamp.</h3>
+                                <div class="actvt-block">
+                                    <div class="imagecontainer-actvt">
+                                        <img class="image-actvt dktpaimg" src="img/activites/4_small/activites-marseille-parc-longchamp-4.jpg" alt="parc_longchamp" />
+                                        <img class="image-actvt smartaimg" src="img/activites/4_small-resized/activites-marseille-parc-longchamp-4.jpg" alt="parc_longchamp" />
+                                    </div>
+                                    <h3 class="actitle">Parc Longchamp.</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
             </div>
             <footer>
                 <div class="footer-links-block">
