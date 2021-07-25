@@ -1,655 +1,2482 @@
-/**** RESERVIA PROJECT - CSS code for desktop ****/
-/*** Variables Déclaration ***/
+/* PREAMBULE **************************************************************************************************
+********* INFORMATIONS : Les notes d'entête permettent de comprendre une partie *******************************
+********* de ce fichier, mais il a aussi pour vocation de me servir de rappel   *******************************
+********* lors d'une consultation future.                                       *******************************
+***************************************************************************************************************
+* ANNÉE : 2021 (2e année de covid)                                               ******************************
+* AUTEUR : Jérôme GEOFFROY                                                       ******************************
+* FORMATION DEVELOPPEUR WEB - OPENCLASSROOMS                                     ******************************
+* FICHIER CSS DU PROJET 2                                                        ******************************
+**** RESERVIA PROJECT - CSS code for desktop                                     ******************************
+**** Lien page github : https://jeromegdev.github.io/JeromeGEOFFROY_P2_110620211/ *****************************
+***************************************************************************************************************
+*** Définitition de certaines abréviations utilisées :                                          ***************
+***** - dsktp = desktop                                                                         ***************
+***** - tbtt = tablette                                                                         ***************
+***** - smtphn = smartphones                                                                    ***************
+***** - hbgt = hébergement(s)                                                                   ***************
+***** - lpp = les plus populaires                                                               ***************
+***** - actvt = activités                                                                       ***************
+***** - hdn = hiden                                                                             ***************
+***** - header-top = partie supérieure ou gauche du header                                      ***************
+***** - header-bottom = partie inférieure ou droite du header                                   ***************
+***** - searchfont : polices du champ de recherches.                                            ***************
+***** - filterfont : polices des boutons de filtration.                                         ***************                                                                                ***************
+***************************************************************************************************************/
+/* NOTICE *****************************************************************************************************
+** Le fichier est composé de 4 parties :                                                        ***************
+***** - Une première partie comportant un tronc commun de définition de propriétés applicables  ***************
+*****   à tous les types et tailles d'écrans                                                    ***************
+***** - 3 parties distinctes, qui, individuellement, ajoutées au tronc commun (première partie)  **************
+*****   permetttent de former un fichier css complet pour une taille d'écran définie.            **************
+******** NOTA BENE : conformément à ce qui a été demandé, les CSS correspondent à des breakpoint **************
+******************   précis. Ainsi, il y a un CSS pour les écrans de petite taille (...<680px )  **************
+******************   un CSS pour les "tablettes" écrans de taille moyenne (681px < ...< 1100px ) **************
+******************   un CSS pour les ordinateurs et les plus grands écrancs (1101px<...)         **************
+***************************************************************************************************************
+***************************************************************************************************************
+***************************************************************************************************************/
+/*********** CSS COMON PART : AVAILABLE ON ALL SCREENS ********************************************************/
+/*** Déclaration des Variables                                                                              ***/
+/**** INFOS SUR LES VARIABLES                                                                               ****
+**** Toutes les couleurs définies de sont pas nécessairement utilisées dans la version finale du code, mais ****
+**** ont été utilisées pendant la phase de développement et de test. Proches des couleurs de la charte      ****
+**** graphique, elles pourraient, pour un développement futur, être disponibles pour le client.             ****
+****************************************************************************************************************/
 :root{
-  --blue:#0065FC;
-  --bluecl:#DEEBFF;
-  --grey:#F2F2F2;
-  --grey2:#9c9c9c;
+        --blue:#0065FC;
+        --bluecl:#DEEBFF;
+        --grey:#F2F2F2;
+        --grey2:#999999;
+        --greyfont:#757575;
+        --greyshdw:#9c9c9c;
+        --greyshdw2:#424242;       
+        }
+        /***Fonts Definition / Défintiion des polices de caractère ***/
+        @font-face {font-family: 'ralewaymedium';src: url('css/fonts/raleway-medium-webfont.woff2') format('woff2'),url('css/fonts/raleway-medium-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewayitalic';src: url('css/fonts/raleway-italic-webfont.woff2') format('woff2'),url('css/fonts/raleway-italic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewaybold';src: url('css/fonts/raleway-bold-webfont.woff2') format('woff2'),url('css/fonts/raleway-bold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewayblack';src: url('css/fonts/raleway-black-webfont.woff2') format('woff2'),url('css/fonts/raleway-black-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewayblack_italic';src: url('css/fonts/raleway-blackitalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-blackitalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewaybold_italic';src: url('css/fonts/raleway-bolditalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-bolditalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewayextrabold';src: url('css/fonts/raleway-extrabold-webfont.woff2') format('woff2'),url('css/fonts/raleway-extrabold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewayextrabold_italic';src: url('css/fonts/raleway-extrabolditalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-extrabolditalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewaylight';src: url('css/fonts/raleway-light-webfont.woff2') format('woff2'),url('raleway-light-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewaylight_italic';src: url('css/fonts/raleway-lightitalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-lightitalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewayextralight';src: url('css/fonts/raleway-extralight-webfont.woff2') format('woff2'),url('css/fonts/raleway-extralight-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        @font-face {font-family: 'ralewayextralight_italic';src: url('css/fonts/raleway-extralightitalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-extralightitalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
+        /*! Generated by Font Squirrel (https://www.fontsquirrel.com) on June 29, 2021 */
+/* définition des polices */
+/**:hover{
+        cursor:pointer;
+        color:var(--blue);
+}*/
+/**** DEBUT DU CSS POUR IPHONES AND SMARTPHONES MAX WIDTH 681PX ****/
+h1{/*16pts (=21px) sur maquette 375px*/
+        font-size: var(--px21);
+        font-weight:500;
+        color:#000;
+        padding: 0;
+        margin: 0;
 }
-
-/***Fonts Definition ***/
-@font-face {font-family: 'ralewaymedium';src: url('css/fonts/raleway-medium-webfont.woff2') format('woff2'),url('css/fonts/raleway-medium-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewayitalic';src: url('css/fonts/raleway-italic-webfont.woff2') format('woff2'),url('css/fonts/raleway-italic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewaybold';src: url('css/fonts/raleway-bold-webfont.woff2') format('woff2'),url('css/fonts/raleway-bold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewayblack';src: url('css/fonts/raleway-black-webfont.woff2') format('woff2'),url('css/fonts/raleway-black-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewayblack_italic';src: url('css/fonts/raleway-blackitalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-blackitalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewaybold_italic';src: url('css/fonts/raleway-bolditalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-bolditalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewayextrabold';src: url('css/fonts/raleway-extrabold-webfont.woff2') format('woff2'),url('css/fonts/raleway-extrabold-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewayextrabold_italic';src: url('css/fonts/raleway-extrabolditalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-extrabolditalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewaylight';src: url('css/fonts/raleway-light-webfont.woff2') format('woff2'),url('raleway-light-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewaylight_italic';src: url('css/fonts/raleway-lightitalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-lightitalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewayextralight';src: url('css/fonts/raleway-extralight-webfont.woff2') format('woff2'),url('css/fonts/raleway-extralight-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'ralewayextralight_italic';src: url('css/fonts/raleway-extralightitalic-webfont.woff2') format('woff2'),url('css/fonts/raleway-extralightitalic-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
-/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on June 29, 2021 */
-/***** CSS page RESERVIA ****/
-/**Spécifications pour l'affichage des polices de caractères **/
-h1{
-  font-family:'ralewayregular', sans-serif;
-  font-size: 1.25em;
-  font-weight: bold;
-  color:#000;
-  padding: 0;
-  margin: 0;
+h2{/*16pts (21px) sur maquette 375px*/
+        font-family:'ralewaybold', sans-serif;
+        font-size: var(--px21);
+        letter-spacing: 0.02em;
+        font-weight: 500;
+        color:#000;
+        padding: 0;
+        margin: 0;   
 }
-h2{
-  font-family:'ralewayregular', sans-serif;
-  font-size: 1.2em;
-  font-weight: bold; 
-  color:#000;
-  padding: 0;
-  margin: 0;
+h3{/*13pts (=17px) sur maquette 375px*/
+        font-family:'ralewayregular', sans-serif;
+        font-size: var(--px17);
+        font-weight:700;
+        color:#000;
+        padding: 0;
+        margin: 0;
 }
-h3{
-  font-family:'ralewayregular', sans-serif;
-  font-size: 1.05em;
-  font-weight: 700; 
-  color:#000;
-  padding: 0;
-  margin: 0;
+h4{/*12pts (=16px) sur maquette 375px*/
+        font-family: 'ralewaybold', sans-serif;
+        font-size:var(--px16);
+        font-weight:500;
+        color:#000;
+        padding: 0;
+        margin: 0;
 }
-h4{
-  font-family: 'ralewayregular', sans-serif;
-  font-size:0.9em;
-  font-weight:700;
-  color:#000;
-  padding: 0;
-  margin: 0;
+h5{/*13pts (=13px) sur maquette 375px*/
+        font-family:'ralewayregular', sans-serif;
+        font-size:var(--px17);
+        font-weight:700;
+        color:black;
+        padding: 0;
+        margin: 0;
 }
-h5{
-  font-family:'ralewayregular', sans-serif;
-  font-size:0.9em;
-  font-weight:700;
-  color:var(--grey2);
-  padding: 0;
-  margin: 0;
+h6{/*12pts (=16px) sur maquette 375px*/
+        font-family:'ralewayregular', sans-serif;
+        font-size:var(--px16);
+        font-weight:500;
+        color:black;
+        padding: 0;
+        margin: 0;
 }
-h6{
-  font-family:'ralewayregular', sans-serif;
-  font-size:0.875em;
-  font-weight:500;
-  color:var(--grey2);
-  padding: 0;
-  margin: 0;
-}
-a{
-  font-family:'ralewayregular', sans-serif;
-  font-size:0.9em;
-  text-decoration: none;
-  color:#000;
-  padding: 0;
-  margin: 0;
-}
-.pa{
-  font-family:'ralewayregular', sans-serif;
-  font-size:0.9em;
-  font-weight:500;
-  color:#000;
-  padding: 0;
-  margin: 0;
-}
-p{
-  font-family:'ralewayregulard', sans-serif;
-  font-size:0.75em;
-  font-weight:500;
-  color:#000;
-  padding: 0;
-  margin: 0;
+p{/*10pts (=13px) sur maquette 375px*/
+        font-family:'ralewayregulard', sans-serif;
+        font-size :var(--px13);
+        font-weight:500;
+        letter-spacing: 0.02em;
+        color:#000;
+        padding: 0;
+        margin: 0;
 }
 .searchfont{
-  font-family:'ralewayregular', sans-serif;
-  font-size: 1.05em;
-  font-weight: 700;
-  margin:0;
-  padding:0;
+        font-family:'ralewaymedium', sans-serif;
+        letter-spacing: 0.06em;
+        font-weight: 500;
+        margin:0;
+        padding:0;
 }
-.product-title{
-  font-weight: 700;
+.filterfont {/*12pts (=16px) sur la maquette 375px*/
+        font-family:'ralewaybold', sans-serif;
+        padding: 0 var(--px20) 0 0;
+        margin: auto var(--px20) auto var(--px10);
+        font-size:var(--px16);
+        font-weight: 500;
+}
+.filterfont:hover{
+        color:var(--blue);
+        text-shadow:0 0 var(--px3) var(--greyfont);
+}
+.filterfont:focus{
+        color:var(--blue);
+}
+.nav-link {/*12pts (=16px) sur la maquette 375px - taille de police des liens de la navugation en haut de page*/
+        font-family:'ralewayregular', sans-serif;
+        font-size: var(--px16);
+        font-weight: 300;
+        margin:0;
+        padding:0;
+}
+.nav-link #inscription {/*12pts (=16px) sur la maquette 375px - taille de police des liens de la navugation en haut de page*/
+        font-family:'ralewayregular', sans-serif;
+        font-size:var(--px16);
+        font-weight: 700;
+        margin:0;
+        padding:0;
+}
+.footertitlefont{/*13pts =17px sur maquette 375px*/
+        font-family:'ralewayregular', sans-serif;
+        font-size: var(--px17);
+        font-weight: 700;
+        margin:0;
+        padding:0;
+}
+.footerlinksfont{/*11pts (=15px) sur maquette 375px*/
+        font-family:'ralewayregular', sans-serif;
+        font-size: var(--px15);
+        font-weight: 300;
+        margin:0;
+        padding:0;
+}
+.links{
+        cursor:pointer;
+}
+a{
+        font-family:'ralewayregular', sans-serif;
+        text-decoration: none;
+        color:#000;
+        cursor:pointer;
+}
+a:hover{
+        color:var(--blue);
+        cursor:pointer;
+}
+a:focus{
+        color:var(--blue);
+        font-weight:700;
+}
+/* CONFIGURATION DU HEADER - Header display sttings */
+.header{
+        display: grid;
+        grid-template-columns: 1fr;
+}
+.header-top {
+        display: flex;
+        margin:auto;
+        padding: var(--px40) 0 0 0;
+}
+.header-bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 0;
+        margin-left:var(--px20)
+}
+.header-infos {
+        display: grid;
+        grid-template-columns:1fr;
+        margin-bottom:var(--px20);
+}
+.site-title{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin:var(--px23) 0 0 0;
+}
+.site-subtitle{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin:0;
+        margin-top:var(--px10);
+}
+/* Fin de configuration du Header*/
+/*** Style CSS de la navigation ***/
+.navigation {
+        display: grid;
+        margin-top: 0;
+        list-style: none;
+        grid-template-columns: 10fr 1fr 1fr 1fr;
+        padding: 0;
+}
+.navigation a{
+        bottom:0;
+}
+.nav ul li{
+        list-style: none;
+}
+.nav-link {
+        display: block;
+        text-decoration: none;
+        padding: 0 var(--px16);
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out !important;
+}
+.nav-link:hover{
+        text-decoration: none;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out !important;
+}
+.nav-button{
+        padding: var(--px40) var(--px20) 0 var(--px20);
+        list-style: none;
+        border-top: solid var(--px3) white;
+        margin-top: var(--px-40);
+}
+.nav-button:hover{
+        border-top: solid var(--px3) var(--blue);
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out !important;
+}
+.nav-button a{
+        color: var(--grey2);
+        text-decoration: none;
+        font-size:var(--px16);
+}
+.nav-button a:hover{
+        color: var(--blue);
+        text-decoration: none;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out !important;
+}
+#inscription{
+        color:var(--blue) !important;
+        font-weight: 700;
+}
+#inscription:hover{
+        color:var(--grey2) !important;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out !important;
+}
+#inscription:focus{
+        color:var(--grey2) !important;
+        text-decoration: underline;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out !important;
+}
+/*** fin CSS navigation ***/
+/*Spécifications d'affichage du champ de recherches */
+.search-bar {
+        display: inline-flex;
+        width: auto;
+        border-radius: var(--px14);
+        max-width: min-content;
+        max-height: var(--px52);
+}
+form {
+        display: grid;
+        grid-template-columns: 2fr 7fr 2fr;
+}
+.search-i {
+        font-size:var(--px17);
+        display: inline-grid;
+}
+.fa-cont-l {
+        display: inline-grid;
+        height: 100%;
+        max-height:var(--px50);
+        min-height:var(--px50);
+        width:100%;
+        max-width:var(--px50);
+        min-width:var(--px50);
+        border-radius: var(--px14) 0 0 var(--px14);
+        background-color: var(--grey);
+        border: var(--px2) solid var(--grey);             
+}
+.fa-cont-r {
+        display: inline-grid;
+        height: 100%;
+        max-height:var(--px50);
+        min-height:var(--px50);
+        width:100%;
+        max-width:var(--px130);
+        min-width:var(--px130);
+        border-radius: 0 var(--px14) var(--px14) 0;
+        background-color: var(--blue);
+        border: var(--px2) solid var(--blue);
+}
+.fa-cont-r:hover{
+        background-color:var(--grey2);
+        border: var(--px2) solid var(--grey2);;
+}
+.fa-search {
+        margin: auto;
+        padding: var(--px10) 0 0 var(--px20);
+        font-size: var(--px17);
+}
+#Rechercher{
+        padding: 0 0 0 var(--px30);
+        margin:0;
+        border-top: solid var(--px2) var(--grey);
+        border-bottom: solid var(--px2) var(--grey);
+        height:100%;
+        max-height: var(--px50);
+        min-height: var(--px50);
+        width:var(--px195)
+}
+.desktop-txt{/*13pts =17px sur maquette 1440px*/
+        color:white;
+        vertical-align: middle;
+        font-family:'ralewayregular', sans-serif;
+        font-size: var(--px17);
+        font-weight: 700;
+        margin:0;
+        padding:0;
+        height: 100%;
+        max-height: var(--px50);
+        min-height: var(--px50);
+        display: inline-grid;
+        margin: auto 0;
+}
+#Recherchertxt {
+        padding: 0;
+        margin: auto;
+}
+#Recherchertxt a{
+        padding: 0;
+        margin: var(--px18) auto;
+        padding: 0;
+}
+label {
+        color: white;
+        margin: auto;
+}
+.searchfield {
+        border: none;
+        padding: var(--px20) var(--px10);
+}
+/** Fin du champs de recherche **/
+/*Spécification boite de filtration */
+#filtres {
+        display: flex;
+        margin: 0;
+        padding: 0 0 var(--px35) 0;
+        width: auto;
+        flex-wrap: wrap;
+        align-items: center;
+}
+.block-filtres{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        max-width: max-content;
+        display: inline-flex;
+}
+.filter-title{
+        padding-right:var(--px20);
+        font-weight: 700 !important;
+}
+#filtres h3{
+        margin-top:auto;
+        margin-bottom:auto;
+}
+.filter-button{
+        margin: auto var(--px10);
+        border:var(--grey) solid var(--px2);
+        border-radius:var(--px50);
+}
+.filter-button:hover {
+        background-color: var(--grey2);
+}
+.filter-button a{
+        text-decoration: none;
+}
+/* spécifications ligne d'information */
+.site-info {
+        display: flex;
+        margin-top: 0;
+}
+.site-info span {
+        font-weight: 500;
+        margin:0;
+        padding:0;
+}
+/************************************* FIN DE HEADER DU DESKTOP *************************************/
+/*Spécifications pour l'utilisation des icones de font-awesome*/
+/*Spécifications pour l'utilisation des icones de font-awesome*/
+.fas{
+        border-radius:var(--px50);
+}
+.fas.fa-info{
+        color: var(--blue)  !important;
+        border-radius: var(--px50);
+        border: solid var(--grey) var(--px2);
+        background-color: #fff;
+        margin: 0 var(--px11) 0 0;
+        text-align: center;
+        font-size: var(--px11);
+        padding: var(--px3) var(--px6);
+}
+.fa-map-marker-alt {
+        font-size: var(--px17);
+        color:#000;
+}
+.fa-map-marker-alt:hover{
+        color:var(--blue);
+}
+.fa-chart-line {
+        /*margin: auto;
+        padding: 0;
+        float:right;
+        position: relative;*/
+        float: right;
+        margin: auto 0 auto auto;
+        padding: 0;
+        font-size: var(--px20);
+        text-align: right;
+}
+.fas{
+        margin:auto;
+        border-radius:var(--px50);
+}
+.fa-money-bill-wave{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+.fa-child{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding:var(--px10) var(--px12);
+}
+.fa-heart{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+.fa-dog{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+.links:hover{
+        cursor:pointer;
+}
+/********** DEBUT DU CSS DESKTOP MIN WIDTH 1101PX  - BASÉ SUR UNE MAQUETTE EN 1440PX **********/
+@media screen and (min-width: 1101px){
+:root{
+        --px-60:-4.16666666666667vw;
+        --px-50:-3.47222222222222vw;
+        --px-45:-3.125vw;
+        --px-40:-2.77777777777778vw;
+        --px-35:-2.43055555555556vw;
+        --px-30:-2.08333333333333vw;
+        --px-27:-1.875vw;
+        --px-26:-1.80555555555556vw;
+        --px-25:-1.73611111111111vw;
+        --px-20:-1.38888888888889vw;
+        --px-15:-1.04166666666667vw;
+        --px-12:-0.833333333333333vw;
+        --px-11:-0.763888888888889vw;
+        --px-10:-0.694444444444444vw;
+        --px-9:-0.625vw;
+        --px-8:-0.555555555555556vw;
+        --px-7:-0.486111111111111vw;
+        --px-6:-0.416666666666667vw;
+        --px-5:-0.347222222222222vw;
+        --px-4:-0.277777777777778vw;
+        --px-3:-0.208333333333333vw;
+        --px-2:-0.138888888888889vw;
+        --px-1:-0.0694444444444444vw;
+        --px1:0.0694444444444444vw;
+        --px2:0.138888888888889vw;
+        --px3:0.208333333333333vw;
+        --px4:0.277777777777778vw;
+        --px5:0.347222222222222vw;
+        --px6:0.416666666666667vw;
+        --px7:0.486111111111111vw;
+        --px8:0.555555555555556vw;
+        --px9:0.625vw;
+        --px10:0.694444444444444vw;
+        --px11:0.763888888888889vw;
+        --px12:0.833333333333333vw;
+        --px13:0.902777777777778vw;
+        --px14:0.972222222222222vw;
+        --px15:1.04166666666667vw;
+        --px16:1.11111111111111vw;
+        --px17:1.18055555555556vw;
+        --px18:1.25vw;
+        --px19:1.31944444444444vw;
+        --px20:1.38888888888889vw;
+        --px21:1.45833333333333vw;
+        --px22:1.52777777777778vw;
+        --px23:1.59722222222222vw;
+        --px24:1.66666666666667vw;
+        --px25:1.73611111111111vw;
+        --px26:1.80555555555556vw;
+        --px27:1.875vw;
+        --px28:1.94444444444444vw;
+        --px29:2.01388888888889vw;
+        --px30:2.08333333333333vw;
+        --px31:2.15277777777778vw;
+        --px32:2.22222222222222vw;
+        --px33:2.29166666666667vw;
+        --px34:2.36111111111111vw;
+        --px35:2.43055555555556vw;
+        --px36:2.5vw;
+        --px37:2.56944444444444vw;
+        --px38:2.63888888888889vw;
+        --px39:2.70833333333333vw;
+        --px40:2.77777777777778vw;
+        --px41:2.84722222222222vw;
+        --px42:2.91666666666667vw;
+        --px43:2.98611111111111vw;
+        --px44:3.05555555555556vw;
+        --px45:3.125vw;
+        --px46:3.19444444444444vw;
+        --px47:3.26388888888889vw;
+        --px48:3.33333333333333vw;
+        --px49:3.40277777777778vw;
+        --px50:3.47222222222222vw;
+        --px51:3.54166666666667vw;
+        --px52:3.61111111111111vw;
+        --px53:3.68055555555556vw;
+        --px54:3.75vw;
+        --px55:3.81944444444444vw;
+        --px56:3.88888888888889vw;
+        --px57:3.95833333333333vw;
+        --px58:4.02777777777778vw;
+        --px59:4.09722222222222vw;
+        --px60:4.16666666666667vw;
+        --px61:4.23611111111111vw;
+        --px62:4.30555555555556vw;
+        --px63:4.375vw;
+        --px64:4.44444444444444vw;
+        --px65:4.51388888888889vw;
+        --px66:4.58333333333333vw;
+        --px67:4.65277777777778vw;
+        --px68:4.72222222222222vw;
+        --px69:4.79166666666667vw;
+        --px70:4.86111111111111vw;
+        --px71:4.93055555555556vw;
+        --px72:5vw;
+        --px73:5.06944444444444vw;
+        --px74:5.13888888888889vw;
+        --px75:5.20833333333333vw;
+        --px76:5.27777777777778vw;
+        --px77:5.34722222222222vw;
+        --px78:5.41666666666667vw;
+        --px79:5.48611111111111vw;
+        --px80:5.55555555555556vw;
+        --px81:5.625vw;
+        --px82:5.69444444444444vw;
+        --px83:5.76388888888889vw;
+        --px84:5.83333333333333vw;
+        --px85:5.90277777777778vw;
+        --px86:5.97222222222222vw;
+        --px87:6.04166666666667vw;
+        --px88:6.11111111111111vw;
+        --px89:6.18055555555556vw;
+        --px90:6.25vw;
+        --px91:6.31944444444444vw;
+        --px92:6.38888888888889vw;
+        --px93:6.45833333333333vw;
+        --px94:6.52777777777778vw;
+        --px95:6.59722222222222vw;
+        --px96:6.66666666666667vw;
+        --px97:6.73611111111111vw;
+        --px98:6.80555555555556vw;
+        --px99:6.875vw;
+        --px100:6.94444444444444vw;
+        --px101:7.01388888888889vw;
+        --px102:7.08333333333333vw;
+        --px103:7.15277777777778vw;
+        --px104:7.22222222222222vw;
+        --px105:7.29166666666667vw;
+        --px106:7.36111111111111vw;
+        --px107:7.43055555555556vw;
+        --px108:7.5vw;
+        --px109:7.56944444444444vw;
+        --px110:7.63888888888889vw;
+        --px111:7.70833333333333vw;
+        --px112:7.77777777777778vw;
+        --px113:7.84722222222222vw;
+        --px114:7.91666666666667vw;
+        --px115:7.98611111111111vw;
+        --px116:8.05555555555556vw;
+        --px117:8.125vw;
+        --px118:8.19444444444444vw;
+        --px119:8.26388888888889vw;
+        --px120:8.33333333333333vw;
+        --px121:8.40277777777778vw;
+        --px122:8.47222222222222vw;
+        --px123:8.54166666666667vw;
+        --px124:8.61111111111111vw;
+        --px125:8.68055555555556vw;
+        --px126:8.75vw;
+        --px127:8.81944444444444vw;
+        --px128:8.88888888888889vw;
+        --px129:8.95833333333333vw;
+        --px130:9.02777777777778vw;
+        --px131:9.09722222222222vw;
+        --px132:9.16666666666667vw;
+        --px130:9.02777777777778vw;
+        --px131:9.09722222222222vw;
+        --px132:9.16666666666667vw;
+        --px133:9.23611111111111vw;
+        --px134:9.30555555555556vw;
+        --px135:9.375vw;
+        --px145:10.0694444444444vw;
+        --px150:10.4166666666667vw;
+        --px172:11.9444444444444vw;
+        --px178:12.3611111111111vw;
+        --px190:13.1944444444444vw;
+        --px192:13.3333333333333vw;
+        --px195:13.5416666666667vw;
+        --px196:13.6111111111111vw;
+        --px225:15.625vw;
+        --px290:20.1388888888889vw;
+        --px296:20.5555555555556vw;
+        --px305:21.1805555555556vw;
+        --px314:21.8055555555556vw;
+        --px325:22.5694444444444vw;
+        --px335:23.2638888888889vw;
+        --px345:23.9583333333333vw;
+        --px106:7.36111111111111vw;
+        --px410:28.4722222222222vw;
+        --px600:41.6666666666667vw;
+        --px680:47.2222222222222vw;
+        --px681:47.2916666666667vw;
+        --px802:55.6944444444444vw;
+        --px938:65.1388888888889vw;
+        --px1020:70.8333333333333vw;
+        --px1100:76.3888888888889vw;
+        --px1101:76.4583333333333vw;
+        --px1362:94.5833333333333vw;      
+}
+/*** pour les ecrans supérieurs à 1101px ***/
+/******************************************/
+/* Particularités de polices */
+h1{/*16pts (=21px) sur maquette 1440px*/
+        font-family:'ralewaymedium', sans-serif;
+        letter-spacing: 0.014em;
+}
+.searchfont{/*12pts (=16px) sur maquette 1440px*/
+        font-size: var(--px16);
+}
+/*** Spécification de la page en page générale ***/
+body {
+        width: var(--px1362);
+        margin: auto;
+        max-width: 100vw;
+    }
+.container-fluid{
+        padding:0;
+        width:100%;
+        max-width: 100%;
+        margin:auto;
+}
+.page{
+        padding:0;
+        margin:auto;
+        width:100%;
+        max-width: 100%;
+}
+.fa-search{
+        display:none !important;
+}    
+/***** PROPRIETES D'AFFICHAGE DES IMAGES *****/
+.logo {
+        max-width: var(--px96);
+        padding: 0 0 0 var(--px12);
+    }
+/* Images des hébergements hbgt*/
+.image-hbgt{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+}
+.imagecontainer-hbgt {
+        /*max-width: 96%;*/
+        max-width:var(--px235);
+        width:100%;
+        max-height: var(--px115);
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px15);
+        border-top-right-radius: var(--px15);
+}
+.imagecontainer-hbgt:hover{
+        box-shadow: 0 0 var(--px-6) var(--greyfont);
+}
+/* Images des plus populaires lpp */
+.image-lpp{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+.imagecontainer-lpp{
+        width: var(--px130);
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px15);
+        border-bottom-left-radius: var(--px15);
+}
+.imagecontainer-lpp:hover{
+        box-shadow: var(--px-1) var(--px-6) var(--greyfont);
+}
+/* Images des activités actvt */
+.imagecontainer-actvt{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px15);
+        border-top-right-radius: var(--px15);
+        width:var(--px306);
+        height:auto;
+}
+.image-actvt{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+}
+.imagecontainer-actvt:hover{
+        box-shadow: 0 var(--px-6) var(--px6) var(--greyshdw);
+        cursor:pointer;
+}
+/*** Propriété des sections ***/
+section{
+        display:flex;
+        flex-direction:column;
+        margin:0 var(--px10);
+}
+/*** Propriété du bloc des sections "Hébergements" et "les plus populaires" ***/
+.sections-blocks{
+        display:grid;
+        grid-template-columns:2fr 1fr;
+        padding:var(--px40) var(--px5);
+        margin:0;
+        gap:var(--px40);
+}
+/*** Affichage de la section des hébergements hbgt ***/
+.section-hbgt {
+        background-color: var(--grey);
+        padding: var(--px40);
+        border-radius: var(--px25);
+}
+/*** Affichage de la section des plus populaires lpp ***/
+.section-lpp{
+        background-color: var(--grey);
+        padding: var(--px40);
+        border-radius: var(--px25);
+}
+/*** Affichage de la section des activités ***/
+.section-actvt{
+        display: flex;
+        flex-direction: column;
+        padding: 0 var(--px5) var(--px40)var(--px5);
+}
+/*** Affichage des catégories = détails des sections ***/
+.category-hbgt {
+        padding: 0;
+        margin: 0;
+        max-width: var(--px802);
+}
+.category-title{
+        padding: 0;
+}
+/****** SECTION : LES HÉBERGEMENTS ******/
+/** Propriétés d'affichage du block constitué seulement par les blocks de chaque hébergement **/
+.block-hbgt-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: var(--px30);
+        padding: 0;
+        margin: var(--px20) 0 var(--px40) 0;
+}
+/* Propriétés d'affichage du block d'un hébergement*/
+.hbgt-block {
+        padding: var(--px5);
+        box-shadow: 0 0 var(--px6) var(--greyshdw);
+        border-radius: var(--px17);
+        background: #fff;
+        width:var(--px245);
+        height:var(--px200);
+}
+.hbgt-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
+}
+.hbgt-block-infos{
+        display:flex;
+        flex-direction:column;
+        padding:0 var(--px14);
+}
+.hbgt-title{
+        padding: var(--px6) 0 var(--px3) 0;
+        margin: 0;
+}
+.hbgt-desc{
+        margin: 0;
+        padding: var(--px3) 0 var(--px3) 0;
+}
+#afficherplus{
+        padding: 0;
+        margin: 0;
+}
+#afficherplus h3 {
+        font-size: var(--px17) !important;
+        font-weight: bolder;
+        }
+/****** SECTION : LES PLUS POPULAIRES ******/
+/*** Détail de l'affichage de la section les plus populaires lpp ***/
+.category-lpp{
+        padding: 0;
+        margin: 0;
+        display:grid;
+        grid-template-columns :1fr;
+        gap: var(--px30);
+        max-width: 100%;
+}
+.lpp-header{
+        /*display: block ruby;
+        padding: 0;
+        margin: 0;*/
+        display:flex;
+        align-items: center;
+}
+.lpp-header h2{
+        padding: 0;
+        margin: 0;
+}
+/** Propriétés d'affichage du block constitué seulement par les blocks de chaque plus populaire **/
+.block-lpp-block{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: var(--px30);
+        margin: 0;
+        padding:0;
+}
+/* Propriétés d'affichage du block d'un hébergement*/
+.lpp-block{
+        display: flex;
+        padding: var(--px5);
+        box-shadow: 0 0 var(--px6) var(--greyshdw);
+        border-radius: var(--px15);
+        background: #fff;
+        height: var(--px145);
+        width:var(--px345);
+}
+.lpp-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
+}
+.lpp-block-infos{
+        display:flex;
+        flex-direction:column;
+        max-width: var(--px172);
+        padding:var(--px14) var(--px15) 0 var(--px14);
+}
+/****** SECTION : ACTIVITÉS ******/
+/*** Détail de l'affichage de la section Activités ***/
+#activites {
+        padding: var(--px20) 0;
+}
+.block-actvt-block{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin:0;
+        padding:0;
+        gap:var(--px40);
+}
+.block-actvt-1row{
+        display:flex;
+        flex-direction: column;
+}
+.block-actvt-2rows{
+        display: inline-grid;
+        grid-template-rows: 1fr auto;
+}
+.batop{
+        display:flex;
+        flex-direction: column;
+        margin-top:0;
+        position:relative;
+}
+.babottom{
+        display:flex;
+        flex-direction: column;
+        margin-bottom:0;
+        position:relative;
+}
+.actvt-block {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 6px 6px var(--greyshdw);
+        border-radius: var(--px15);
+        padding: 0;
+        margin: 0;
+}
+.actvt-block:hover{
+        box-shadow: 0 6px 6px var(--blue);
+}
+.actvt-block h2{
+        padding: var(--px20);
+}
+h4.actitle {
+        padding: 0;
+        margin: var(--px20) 0 var(--px20) var(--px14);
+}
+/*Spécifications de l'apparence du système de vote*/
+.hbgt-rating{
+        margin: var(--px-6) 0 var(--px6) 0;
+        padding: 0;
+}
+.lpp-rating{
+        margin: auto auto var(--px12) 0;
+        padding: 0;
+        position: relative;
+}
+/* Propriété d'affichage des icones FA */
+.fa-star{
+        color:#cbcbcb;
+        font-size:var(--px10);
+        padding:var(--px2);
+}
+.starok{
+        color:var(--blue);
+}
+/** Spécification de l'affichage du footer **/
+footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: var(--px40) 0 0 var(--px40);
+        background: var(--grey);
+        margin: 0 var(--px-40);
+}
+.footer-links-block{
+        display:flex;
+        flex-direction:column;
+        margin:auto;
+        margin-left:0;
+        padding-left:0;
+        align-items: flex-start;
+        padding:var(--px20);
+}
+.footer-title{
+        padding-bottom:0;
+        margin-bottom:0;
+}
+.footer-links-list ul {
+        padding-left: 0;
+}
+.footer-links-list li{
+        margin-top:var(--px5);
+        margin-bottom:var(--px5);
+        list-style: none;
+}
+.footer-links-list a{
+        text-decoration: none;
+}
+/** Fin de spécifications du footer **/ 
+/** CHAMPS CACHÉS **/
+.smartaimg{
+        display:none;
+}
+.header-tbtt{
+        display:none;
+}
+.fa-smart{
+        display:none !important;
+}
+.hdn-class-dsktp{
+        display:none;
+}
+}
+/********** FIN DU CSS DESKTOP MIN WIDTH 1101PX ************/
+/*******************************************************************/
+/********** DEBUT DU CSS SMARTPHONES MAX WIDTH 680PX - BASÉ SUR UNE MAQUETTE EN 375PX ************/
+@media screen and (max-width:680px){
+:root{
+        --px-60:-16vw;
+        --px-50:-13.3333333333333vw;
+        --px-45:-12vw;
+        --px-40:-10.6666666666667vw;
+        --px-35:-9.33333333333333vw;
+        --px-30:-8vw;
+        --px-27:-7.2vw;
+        --px-26:-6.93333333333333vw;
+        --px-25:-6.66666666666667vw;
+        --px-20:-5.33333333333333vw;
+        --px-15:-4vw;
+        --px-12:-3.2vw;
+        --px-11:-2.93333333333333vw;
+        --px-10:-2.66666666666667vw;
+        --px-9:-2.4vw;
+        --px-8:-2.13333333333333vw;
+        --px-7:-1.86666666666667vw;
+        --px-6:-1.6vw;
+        --px-5:-1.33333333333333vw;
+        --px-4:-1.06666666666667vw;
+        --px-3:-0.8vw;
+        --px-2:-0.533333333333333vw;
+        --px-1:-0.266666666666667vw;
+        --px1:0.266666666666667vw;
+        --px2:0.533333333333333vw;
+        --px3:0.8vw;
+        --px4:1.06666666666667vw;
+        --px5:1.33333333333333vw;
+        --px6:1.6vw;
+        --px7:1.86666666666667vw;
+        --px8:2.13333333333333vw;
+        --px9:2.4vw;
+        --px10:2.66666666666667vw;
+        --px11:2.93333333333333vw;
+        --px12:3.2vw;
+        --px13:3.46666666666667vw;
+        --px14:3.73333333333333vw;
+        --px15:4vw;
+        --px16:4.26666666666667vw;
+        --px17:4.53333333333333vw;
+        --px18:4.8vw;
+        --px19:5.06666666666667vw;
+        --px20:5.33333333333333vw;
+        --px21:5.6vw;
+        --px22:5.86666666666667vw;
+        --px23:6.13333333333333vw;
+        --px24:6.4vw;
+        --px25:6.66666666666667vw;
+        --px26:6.93333333333333vw;
+        --px27:7.2vw;
+        --px28:7.46666666666667vw;
+        --px29:7.73333333333333vw;
+        --px30:8vw;
+        --px31:8.26666666666667vw;
+        --px32:8.53333333333333vw;
+        --px33:8.8vw;
+        --px34:9.06666666666667vw;
+        --px35:9.33333333333333vw;
+        --px36:9.6vw;
+        --px37:9.86666666666667vw;
+        --px38:10.1333333333333vw;
+        --px39:10.4vw;
+        --px40:10.6666666666667vw;
+        --px41:10.9333333333333vw;
+        --px42:11.2vw;
+        --px43:11.4666666666667vw;
+        --px44:11.7333333333333vw;
+        --px45:12vw;
+        --px46:12.2666666666667vw;
+        --px47:12.5333333333333vw;
+        --px48:12.8vw;
+        --px49:13.0666666666667vw;
+        --px50:13.3333333333333vw;
+        --px51:13.6vw;
+        --px52:13.8666666666667vw;
+        --px53:14.1333333333333vw;
+        --px54:14.4vw;
+        --px55:14.6666666666667vw;
+        --px56:14.9333333333333vw;
+        --px57:15.2vw;
+        --px58:15.4666666666667vw;
+        --px59:15.7333333333333vw;
+        --px60:16vw;
+        --px61:16.2666666666667vw;
+        --px62:16.5333333333333vw;
+        --px63:16.8vw;
+        --px64:17.0666666666667vw;
+        --px65:17.3333333333333vw;
+        --px66:17.6vw;
+        --px67:17.8666666666667vw;
+        --px68:18.1333333333333vw;
+        --px69:18.4vw;
+        --px70:18.6666666666667vw;
+        --px71:18.9333333333333vw;
+        --px72:19.2vw;
+        --px73:19.4666666666667vw;
+        --px74:19.7333333333333vw;
+        --px75:20vw;
+        --px76:20.2666666666667vw;
+        --px77:20.5333333333333vw;
+        --px78:20.8vw;
+        --px79:21.0666666666667vw;
+        --px80:21.3333333333333vw;
+        --px81:21.6vw;
+        --px82:21.8666666666667vw;
+        --px83:22.1333333333333vw;
+        --px84:22.4vw;
+        --px85:22.6666666666667vw;
+        --px86:22.9333333333333vw;
+        --px87:23.2vw;
+        --px88:23.4666666666667vw;
+        --px89:23.7333333333333vw;
+        --px90:24vw;
+        --px91:24.2666666666667vw;
+        --px92:24.5333333333333vw;
+        --px93:24.8vw;
+        --px94:25.0666666666667vw;
+        --px95:25.3333333333333vw;
+        --px96:25.6vw;
+        --px97:25.8666666666667vw;
+        --px98:26.1333333333333vw;
+        --px99:26.4vw;
+        --px100:26.6666666666667vw;
+        --px101:26.9333333333333vw;
+        --px102:27.2vw;
+        --px103:27.4666666666667vw;
+        --px104:27.7333333333333vw;
+        --px105:28vw;
+        --px106:28.2666666666667vw;
+        --px107:28.5333333333333vw;
+        --px108:28.8vw;
+        --px109:29.0666666666667vw;
+        --px110:29.3333333333333vw;
+        --px111:29.6vw;
+        --px112:29.8666666666667vw;
+        --px113:30.1333333333333vw;
+        --px114:30.4vw;
+        --px115:30.6666666666667vw;
+        --px116:30.9333333333333vw;
+        --px117:31.2vw;
+        --px118:31.4666666666667vw;
+        --px119:31.7333333333333vw;
+        --px120:32vw;
+        --px121:32.2666666666667vw;
+        --px122:32.5333333333333vw;
+        --px123:32.8vw;
+        --px124:33.0666666666667vw;
+        --px125:33.3333333333333vw;
+        --px126:33.6vw;
+        --px127:33.8666666666667vw;
+        --px128:34.1333333333333vw;
+        --px129:34.4vw;
+        --px130:34.6666666666667vw;
+        --px131:34.9333333333333vw;
+        --px132:35.2vw;
+        --px130:34.6666666666667vw;
+        --px131:34.9333333333333vw;
+        --px132:35.2vw;
+        --px133:35.4666666666667vw;
+        --px134:35.7333333333333vw;
+        --px135:36vw;
+        --px140:37.3333333333333vw;
+        --px145:38.6666666666667vw; 
+        --px150:40vw;
+        --px172:45.8666666666667vw;
+        --px178:47.4666666666667vw;
+        --px192:51.2vw;
+        --px290:77.3333333333333vw;
+        --px325:86.6666666666667vw;
+        --px335:89.3333333333333vw;
+        --px106:28.2666666666667vw;
+        --px404:107.733333333333vw;
+        --px420:112vw;
+        --px600:160vw;
+        --px681:181.6vw;
+        --px938:250.133333333333vw;
+        --px1020:272vw;
+        --px1100:293.333333333333vw;    
+}
+/* Particularités de polices */
+h1{/*16pts (=21px) sur maquette 375px*/
+        font-family:'ralewaybold', sans-serif;
+        letter-spacing: 0.07em;
+        font-size: var(--px16);
+}
+.filterfont{
+        font-family:'ralewayregular', sans-serif;
+        font-size: var(--px16);
+        font-weight: 700;
+        margin:auto var(--px20);
+        padding:0;
+        vertical-align:sub;
+}
+.filterfont:hover{
+        color: var(--blue);
+}
+.searchfont{/*13pts (=17px) sur maquette 375px*/
+        font-family:'ralewayregular', sans-serif;
+        font-size: var(--px17);
+        font-weight: 700;
+        letter-spacing:0.057em;
+}
+
+/********** AFFICHAGE DES CONTENEURS **********/
+/*** Gobal container - Conteneur global ***/
+body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding:0;
+}
+.container-fluid {
+        max-width: 100vw;
+        width: var(--px335);
+        margin: var(--px20);
+        padding: 0;
+}
+.page {
+        max-width: 100%;
+        width: 100%;
+        margin:0;
+        padding:0;
+}
+header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        width: 100%;
+}
+.header-top {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 0px;
+        height: var(--px110);
+}
+.header-bottom {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        padding: var(--px35) 0;
+        margin: 0;
+}
+
+.header-infos {
+        padding: 0 0 var(--px35) 0;
+        margin:  auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: inherit;
+}
+.site-title {
+        padding: 0;
+        margin: 0 0 var(--px16) 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 86.567164%;
+}
+.site-subtitle {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-weight:300;
+        margin:0;
+}
+/*** Navigation Style CSS ***/
+.navigation {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        margin:auto;
+        height:var(--px109);
+}
+nav {
+        padding: 0;
+        margin: auto;
+        max-width: 100%;
+        width: 100%;
+}
+.nav ul li {
+        list-style: none;
+        max-width: 50%;
+        margin:0;
+        padding:0;
+}
+.nav-button {
+        list-style: none;
+        border-bottom: solid var(--px3) white;
+        text-align: center;
+        height: var(--px61);
+        padding: 0;
+        border-top: none;
+        margin: 0;
+    }
+.nav-button:hover{
+        border-bottom: solid 0.4vw var(--blue);
+        border-top: none;
+}
+.nav-button a {
+        color: black;
+        text-decoration: none;
+        padding: var(--px30) 0 var(--px13) 0;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !important;
+}
+#inscription {
+        color: var(--blue);
+        font-weight: 700;
+        border:none;
+        margin:auto;
+}
+#inscription:hover {
+        color: var(--grey2) !important;
+        border:none !important;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !important;
+}
+.navhebergement {
+        order: 2;
+}
+.navactivites {
+        order: 3;
+}
+.navinscription {
+        order: 1;
+        text-align: right !important;
+        margin:auto 0;
+        border:none !important;
+}
+.navinscription:hover{
+        color:#000;
+}
+/*** fin CSS navigation ***/
+/*Spécifications d'affichage du champ de recherches */
+.search-bar {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        padding: 0;
+        height:var(--px52);
+        border: solid var(--px2) var(--grey);
+        border-radius: var(--px17);
+        
+}
+form {
+        display: grid;
+        grid-template-rows: 1fr;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr 5fr 1fr;
+}
+#Rechercher {
+        margin: 0;
+        max-width: 100%;
+        width: auto;
+        height: 100%;
+        background-color: transparent;
+        min-width: 70%;
+}
+.searchfield {
+        border: none;
+        padding: 0 var(--px1);
+}
+.desktop-txt {
+        display: none;
+}
+.Recherchertxt{
+        margin:0;
+        padding:0;
+}
+.Recherchertxt a{
+        margin:0;
+        padding:0;
+}
+.fa-cont-l {
+        padding: 0;
+        display: inline-grid;
+        height:var(--px50);
+        width:var(--px50);
+        margin: var(--px-1);
+        border-radius: var(--px14) 0 0 var(--px14);
+        background-color: var(--grey);
+        border:var(--px2) solid var(--grey);
+}
+.fa-map-marker-alt{
+        margin:0;
+        padding:0;
+        margin:auto;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+}
+.fa-cont-r{
+        padding: 0;
+        display: inline-grid;
+        height:var(--px50);
+        width:var(--px50);
+        margin: var(--px-1);
+        border-radius: var(--px14);
+        background-color: var(--blue);
+        border: var(--px2) solid var(--blue);
+        min-width:var(--px50);
+}
+.fa-cont-r:hover{
+        background-color: var(--greyshdw2);
+}
+.fa-search{
+        margin:auto;
+        padding:0;
+        color:white;
+        background-color:transparent;
+}
+.fa-search:hover {
+        margin:auto;
+        color:var(--grey);
+        font-weight: bolder;
+}
+/**Fin du champs de recherche*/
+/***** CSS du bloc de filtres *****/
+#filtres {
+        display: flex;
+        padding: var(--px36) 0 var(--px30) 0;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+}
+.filter-title {
+        margin: 0;
+        padding: 0 0 var(--px18) 0;
+}
+.block-filtres {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        gap: var(--px13);
+}
+.filter-button{
+        display:flex;
+        flex-wrap: nowrap;
+        margin:0;
+        border:var(--grey) solid var(--px2);
+        border-radius:var(--px50);
+        padding: 0;
+}
+.filter-button a {
+        margin:auto;
+        padding:0 var(--px13);
+}
+.filter-button:hover {
+        background-color: var(--grey2);
+}
+.left-f-bbtn{
+        min-width: var(--px220) !important;
+        margin:0;
+        padding:0;
+}
+/***** FIN DE CSS BLOC FILTRE *****/
+.site-info{
+        margin:0;
+        padding:0;
+        display:block;
+}
+.site-info h6{
+        display:inline-block;
+        clear:left;
+}
+/*Spécifications pour l'utilisation des icones de font-awesome*/
+.fa-info{
+        color: var(--blue)  !important;
+        border-radius: var(--px50);
+        border: solid var(--grey) var(--px2);
+        border-collapse: collapse;
+        background-color: #fff;
+        margin: var(--px5);
+        text-align: center;
+        font-size: var(--px11) !important;
+        padding: var(--px4) var(--px9) !important;
+        margin: 0 var(--px12) 0 0 !important;
+}
+/***** PROPRIETES D'AFFICHAGE DES IMAGES *****/
+.logo {
+        width: var(--px96);
+        height: var(--px47);
+        padding: 0 0 var(--px12) 0;
+        margin: 0 0 var(--px1) 0;
+}
+/* Images des plus populaires lpp */
+.imagecontainer-lpp{
+        width: var(--px130);
+        height: 100%;
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px20);
+        border-bottom-left-radius: var(--px20);     
+}
+.image-lpp{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+/* Images des hébergements hbgt*/
+.imagecontainer-hbgt{
+        width:100%;
+        height:var(--px115);
+        padding: 0;
+        margin: var(--px2) var(--px2) 0 var(--px2);
+        overflow: hidden;
+        border-top-left-radius: var(--px14);
+        border-top-right-radius: var(--px14);
+}
+.image-hbgt{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+/* Images des activités actvt */
+.imagecontainer-actvt{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px14);
+        border-top-right-radius: var(--px14);
+        width:var(--px335);
+        height:var(--px135);
+}
+.imagecontainer-actvt:hover{
+        box-shadow: 0 -6px 6px var(--blue);
+}
+.image-actvt{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+}
+/************ PROPRIETES DES SECTIONS ************/
+section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        padding: 0;
+        margin: 0;
+}
+/*** Propriété des sections "Hébergements" et "les plus populaires" ***/
+.sections-blocks{
+        display: flex;
+        flex-direction: column-reverse;
+        margin:0;
+        gap:0;
+}
+/*** Affichage de la section des hébergements hbgt ***/
+.section-hbgt {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: var(--px335);
+        align-items: center;
+}
+/*** Affichage de la section des plus populaires lpp ***/
+.section-lpp {
+        background-color: var(--grey);
+        padding: var(--px26) 0;
+        margin: 0 var(--px-20);
+}
+/*** Affichage de la section des activités ***/
+.section-actvt{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 var(--px26) 0;
+        margin:0 0 var(--px20) 0;
+}
+/****** SECTION : LES PLUS POPULAIRES ******/
+/*** Détail de l'affichage de la section les plus populaires lpp ***/
+.category-lpp{
+        padding: 0;
+        margin:0;
+}
+.lpp-header {
+        display: flex;
+        padding: var(--px20) 0 var(--px26) 0;
+        margin: 0 var(--px20);
+}
+.lpp-header h2{
+        margin: 0;
+}
+.fas.fa-chart-line {
+        float: right;
+        margin: auto 0 auto auto;
+        padding: 0;
+        font-size: var(--px20);
+        text-align: right;
+}
+/** Propriétés d'affichage du block constitué seulement par les blocks de chaque plus populaire **/
+.block-lpp-block{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: var(--px10);
+        margin:auto;
+        padding:0 0 var(--px10) 0;
+}
+/* Propriétés d'affichage du block d'un hébergement*/
+.lpp-block {
+        display: grid;
+        padding: var(--px5);
+        box-shadow: 0 0 var(--px5) var(--grey);
+        border-radius: var(--px20);
+        background: #fff;
+        width: var(--px335);
+        margin: auto;
+        grid-template-columns: 1fr 2fr;
+        height:var(--px145)
+}
+.lpp-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
+}
+/*Affichage de la taille des polices du bloc info*/
+.lpp-block-infos{
+        display:grid;
+        grid-template-rows:auto 1fr 1fr;
+        width: var(--px170);
+        padding: 0 0 0 var(--px14);
+        margin:8.15% 0 8.15% 0;
+        height: var(--px110);
+}
+.lpp-title{
+        margin:auto 0 auto 0;
+        padding:0;
+        padding-bottom: var(--px14);
+}
+.lpp-desc{
+        margin:auto 0 3% 0;
+        padding:0;
+        padding-bottom: var(--px40);
+}
+/****** SECTION : LES HÉBERGEMENTS ******/
+/*** Affichage des catégories = sections ***/
+.category-hbgt{
+        padding: 0;
+        margin: 0;
+}
+.category-title{
+        padding: var(--px40) 0 var(--px18) 0;
+}
+.category-title h2{
+        padding:0;
+}
+/** Propriétés d'affichage du block constitué seulement par les blocks de chaque hébergement **/
+.block-hbgt-block{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding:0;
+        margin: 0;
+        gap:var(--px17);
+}
+/* Propriétés d'affichage du block d'un hébergement*/
+/*.hbgt-block {
+        padding: 1.335vw;
+        box-shadow: 0 0 1.602vw var(--grey);
+        border-radius: 3.6vw;
+        background: #fff;
+        height: 20.5vh;
+        margin: 0 auto;
+}*/
+.hbgt-block {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:var(--px5);
+        box-shadow: 0 0 6px var(--greyshdw);
+        border-radius:var(--px17);
+        background: #fff;
+        height:var(--px192);
+        width:var(--px335);
+        margin:0;
+}
+.hbgt-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue);
+}
+/*.hbgt-block-infos{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 0 1.867vw;
+        max-height: 25%;
+        margin-top: 2%;
+}*/
+/*Affichage de la taille des polices du bloc info*/
+.hbgt-block-infos {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        width: var(--px325);
+        height:var(--px55);
+        padding: 0 0 var(--px10) var(--px10);
+        margin:var(--px10) var(--px10) var(--px10) var(--px10);
+}
+/*.hbgt-block-infos {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.9722vw;
+        width: var(--px290);
+        height: var(--px55);
+        max-height: var(--px55);
+}*/
+.hbgt-title{
+        /*padding: var(--px10) 0 var(--px6) 0;*/
+        margin: 0 0 var(--px6) 0;
+}
+.hbgt-desc{
+        margin: 0;
+        padding: 0 0 var(--px8) 0;
+}
+#afficherplus{
+        padding: var(--px20) 0;
+}
+/*Spécifications de l'apparence du système de vote*/
+.hbgt-rating{
+        /*margin: -1.602vw 0 1.602vw 0;
+        padding: 0;*/
+        display:flex;
+        flex-wrap: nowrap;
+        margin:  0 0 var(--px11) 0;
+        padding:0;
+        position: relative;
+        max-width: var(--px70);
+        max-height: var(--px12);
+        width:100%;
+        height:100%;
+}
+.lpp-rating{
+        display:flex;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        max-width: var(--px70);
+        max-height: var(--px12);
+        width:100%;
+        height:100%;
+}
+.fa-star{
+        color:#cbcbcb;
+        font-size:var(--px12);
+        padding:var(--px1);
+}
+.starok{
+        color:var(--blue);
+}
+/****** SECTION : ACTIVITÉS ******/
+/*** Détail de l'affichage de la section Activités ***/
+#activites h2{
+        padding:0 0 var(--px30) 0;
+}
+.block-actvt-block{
+        display:flex;
+        flex-direction: column;
+        margin:0;
+        padding:0;
+}
+.block-actvt-1row{
+        display: flex;
+        grid-template-rows: 1fr auto;
+}
+.block-actvt-2rows{
+        display: inline-grid;
+        grid-template-rows: 1fr auto;
+}
+.actvt-block{
+        display: flex;
+        flex-direction: column;
+        box-shadow : 0 6px 6px var(--greyshdw);
+        border-radius: var(--px14);
+        margin:0 0 var(--px20) 0;
+        width:var(--px335);
+        height:var(--px190);
+        box-shadow:0 0 6px var(--greyshdw);
+}
+.actvt-block:hover{
+        box-shadow: 0 0 var(--px6) var(--greyshdw2);
+}
+.actitle{
+        padding:0;
+        margin:var(--px20) 0 var(--px20) var(--px14);
+}
+
+/******** CSS DU FOOTER ********/
+footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: var(--px10) var(--px-20) 0 var(--px-20);
+        padding: var(--px20) 0 0 var(--px20);        
+        background: var(--grey);
+}
+.footer-links-block{
+        display:flex;
+        flex-direction:column;
+        margin:auto;
+        margin:0;
+        padding:0 0 0 var(--px5);
+        align-items: flex-start;
+}
+.footer-title{
+        margin-bottom:0;
+}
+.footer-links-list ul {
+        padding-left: 0;
+}
+.footer-links-list li{
+        list-style: none;
+        margin-bottom: var(--px18);
+        }
+.footer-links-list a{
+        text-decoration: none;
+        font-weight:300;
+}
+/** Fin de spécifications du footer **/
+/** CHAMPS CACHÉS **/
+.dktpaimg{
+        display:none;
+}
+.header-tbtt{
+        display:none;
+}
+.hdn-class-smtphn{
+        display:none;
+}
+}
+/***** FIN DU CSS POUR IPHONES AND SMARTPHONES MAX WIDTH 680PX *****/
+/*******************************************************************/
+/** DEBUT DU CSS POUR TABLETTES MIN WIDTH 681PX MAX WIDTH 1100PX - BASE SUR UNE MAQUETTE EN 100PX**/
+@media screen and (min-width:681px) and (max-width:1100px){
+        /***** CSS page RESERVIA ****/
+:root{
+        --px-35:-3.18181818181818vw;
+        --px-30:-2.72727272727273vw;
+        --px-25:-2.27272727272727vw;
+        --px-20:-1.81818181818182vw;
+        --px-15:-1.36363636363636vw;
+        --px-10:-0.909090909090909vw;
+        --px-3:-0.272727272727273vw;
+        --px-1:-0.0909090909090909vw;
+        --px1:0.0909090909090909vw;
+        --px2:0.181818181818182vw;
+        --px3:0.272727272727273vw;
+        --px4:0.363636363636364vw;
+        --px5:0.454545454545455vw;
+        --px6:0.545454545454545vw;
+        --px7:0.636363636363636vw;
+        --px8:0.727272727272727vw;
+        --px9:0.818181818181818vw;
+        --px10:0.909090909090909vw;
+        --px11:1vw;
+        --px12:1.09090909090909vw;
+        --px13:1.18181818181818vw;
+        --px14:1.27272727272727vw;
+        --px15:1.36363636363636vw;
+        --px16:1.45454545454545vw;
+        --px17:1.54545454545455vw;
+        --px18:1.63636363636364vw;
+        --px19:1.72727272727273vw;
+        --px20:1.81818181818182vw;
+        --px21:1.90909090909091vw;
+        --px22:2vw;
+        --px23:2.09090909090909vw;
+        --px24:2.18181818181818vw;
+        --px25:2.27272727272727vw;
+        --px26:2.36363636363636vw;
+        --px27:2.45454545454545vw;
+        --px28:2.54545454545455vw;
+        --px29:2.63636363636364vw;
+        --px30:2.72727272727273vw;
+        --px31:2.81818181818182vw;
+        --px32:2.90909090909091vw;
+        --px33:3vw;
+        --px34:3.09090909090909vw;
+        --px35:3.18181818181818vw;
+        --px36:3.27272727272727vw;
+        --px37:3.36363636363636vw;
+        --px38:3.45454545454545vw;
+        --px39:3.54545454545455vw;
+        --px40:3.63636363636364vw;
+        --px41:3.72727272727273vw;
+        --px42:3.81818181818182vw;
+        --px43:3.90909090909091vw;
+        --px44:4vw;
+        --px45:4.09090909090909vw;
+        --px46:4.18181818181818vw;
+        --px47:4.27272727272727vw;
+        --px48:4.36363636363636vw;
+        --px49:4.45454545454546vw;
+        --px50:4.54545454545455vw;
+        --px51:4.63636363636364vw;
+        --px52:4.72727272727273vw;
+        --px53:4.81818181818182vw;
+        --px54:4.90909090909091vw;
+        --px55:5vw;
+        --px56:5.09090909090909vw;
+        --px57:5.18181818181818vw;
+        --px58:5.27272727272727vw;
+        --px59:5.36363636363636vw;
+        --px60:5.45454545454546vw;
+        --px61:5.54545454545455vw;
+        --px62:5.63636363636364vw;
+        --px63:5.72727272727273vw;
+        --px64:5.81818181818182vw;
+        --px65:5.90909090909091vw;
+        --px66:6vw;
+        --px67:6.09090909090909vw;
+        --px68:6.18181818181818vw;
+        --px69:6.27272727272727vw;
+        --px70:6.36363636363636vw;
+        --px71:6.45454545454546vw;
+        --px72:6.54545454545455vw;
+        --px73:6.63636363636364vw;
+        --px74:6.72727272727273vw;
+        --px75:6.81818181818182vw;
+        --px76:6.90909090909091vw;
+        --px77:7vw;
+        --px78:7.09090909090909vw;
+        --px79:7.18181818181818vw;
+        --px80:7.27272727272727vw;
+        --px81:7.36363636363636vw;
+        --px82:7.45454545454546vw;
+        --px83:7.54545454545455vw;
+        --px84:7.63636363636364vw;
+        --px85:7.72727272727273vw;
+        --px86:7.81818181818182vw;
+        --px87:7.90909090909091vw;
+        --px88:8vw;
+        --px89:8.09090909090909vw;
+        --px90:8.18181818181818vw;
+        --px91:8.27272727272727vw;
+        --px92:8.36363636363636vw;
+        --px93:8.45454545454546vw;
+        --px94:8.54545454545454vw;
+        --px95:8.63636363636364vw;
+        --px96:8.72727272727273vw;
+        --px97:8.81818181818182vw;
+        --px98:8.90909090909091vw;
+        --px99:9vw;
+        --px100:9.09090909090909vw;
+        --px105:9.54545454545454vw;
+        --px106:9.63636363636364vw;
+        --px115:10.4545454545455vw;
+        --px125:11.3636363636364vw;
+        --px130:11.8181818181818vw;
+        --px135:12.2727272727273vw;
+        --px145:13.1818181818182vw;
+        --px150:13.6363636363636vw;
+        --px172:15.6363636363636vw;
+        --px190:17.2727272727273vw;
+        --px192:17.4545454545455vw;
+        --px225:20.4545454545455vw;
+        --px290:26.3636363636364vw;
+        --px296:26.9090909090909vw;
+        --px305:27.7272727272727vw;
+        --px314:28.5454545454545vw;
+        --px325:29.5454545454545vw;
+        --px335:30.4545454545455vw;
+        --px345:31.3636363636364vw;
+        --px410:37.2727272727273vw;
+        --px600:54.5454545454545vw;
+        --px680:61.8181818181818vw;
+        --px681:61.9090909090909vw;
+        --px938:85.2727272727273vw;
+        --px1020:92.7272727272727vw;
+        --px1045:95vw;
+        --px1100:100vw;
+        --px1101:100.090909090909vw;
+        }
+/*Spécifications pour l'utilisation des icones de font-awesome*/
+.fas{
+        margin:auto;
+        border-radius:var(--px50);
+}
+.fa-money-bill-wave{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+.fa-child{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding:var(--px10) var(--px12);
+}
+.fa-heart{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+.fa-dog{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+/*.fa-info{
+        color: var(--blue)  !important;
+        border-radius: var(--px50);
+        border: solid var(--grey) var(--px2);
+        border-collapse: collapse;
+        background-color: #fff;
+        margin: 0 var(--px11) 0 0;
+        text-align: center;
+        font-size: var(--px11);
+        padding: var(--px) var(--px4);
+}*/
+.fas.fa-chart-line {
+        margin: var(--px30) auto 0 auto;
+        padding: 0;
+        position: relative;
+        font-size: var(--px25);
+}
+.links:hover{
+        cursor:pointer;
+}
+/************************************* CSS RESERVIA MODE TABLETTE 680PX - 1100PX *************************************/
+/* Particularités de polices */
+h1{/*16pts (=21px) sur maquette 1440px*/
+        font-family:'ralewaymedium', sans-serif;
+        letter-spacing:0.014em;
+}
+.searchfont{/*12pts (=16px) sur maquette 1440px*/
+        font-size: var(--px16);
+}
+h4{
+        font-size:var(--px15);
 }
 /*** Spécification de la page en page générale ***/
 body{
-  padding-left: 0;
-  padding-right: 0;
-  max-width: 500px;
-  width: auto;
-  margin: 30px 25px;
-  font-size: 17pt;
+        width:94.6%;
+        margin:auto;
+        max-width:100vw;
+        padding:2.7%;
 }
 .container-fluid{
-  max-width: 100%;
-  width: 100%;
-  margin: auto;
-  padding: 0;
+        padding:0;
+        width:100%;
+        max-width: 100%;
+        margin:auto;
 }
 .page{
-  max-width: 100%;
-  width: 100%;
-  margin: auto;
-  padding: 0;
-}
-.grid{
-  display:grid;
-}
-.header-top{
-  display:flex;
-  flex-direction:row-reverse;
-  flex-wrap: wrap;
-}
-/*Spécifications pour l'utilisation des icones de font-awesome*/
-.fas{
-  padding:15px;
-  border-radius:50%;
-}
-.faf{
-  padding:1%;
-  border-radius:50%;
-}
-.fa-money-bill-wave{
-  color:var(--blue);
-  border-radius:50%;
-  background-color:var(--bluecl);
-  vertical-align:middle;
-  padding: 10px;
-}
-.fa-child{
-  color:var(--blue);
-  border-radius:50%;
-  background-color:var(--bluecl);
-  vertical-align:middle;
-  padding:10px 12px;
-}
-.fa-heart{
-  color:var(--blue);
-  border-radius:50%;
-  background-color:var(--bluecl);
-  vertical-align:middle;
-  padding: 10px;
-}
-.fa-dog{
-  color:var(--blue);
-  border-radius:50%;
-  background-color:var(--bluecl);
-  vertical-align:middle;
-  padding: 10px;
-}
-.fa-info{
-  color: var(--blue)  !important;
-  border-radius: 50%;
-  border: solid var(--grey) 2px;
-  border-collapse: collapse;
-  background-color: #fff;
-  margin: 5px;
-  text-align: center;
-  font-size: 0.7em;
-  padding: 3px 6px;
+        padding:0;
+        margin:auto;
+        width:100%;
+        max-width: 100%;
 }
 .fa-search{
-  padding:0;
-  margin:0;
+        display:none !important;
 }
-i {
-    border-radius: 50%;
-    border: 1x solid grey;
-    padding: 1px;
-}
-
 /*Spécifications de l'apparence du système de vote*/
-.productrating{
-  margin-top:0;
-  padding:0;
+.hbgt-rating{
+        margin: 0;
+        padding: 0;
+        display:flex;
+        font-size:var(--px10);
+        position:relative;
 }
-.fa-star{
-color:#cbcbcb;
-font-size:0.6em;
-padding:2px;
+.lpp-rating{
+        margin: 0;
+        padding: 0;
+        display:flex;
+        font-size:var(--px10);
+        position:relative;
+}
+.fa-star {
+        padding:1px;
+        margin:1px;
+        color:var(--grey2);
 }
 .starok{
-color:#0065FC;
+        color:var(--blue);
 }
-/** Spécification de l'affichage des images **/
-/* Images properties for lodgings mini - Miniature des images des hébergements */
-.p-img-mini{
-  max-width: -moz-available;
-  width:100%;
-  height:auto;
-  border:4px solid thin white;
-  margin:4px;
-  background-color: white;
-  border-top-left-radius:17px;
-  border-top-right-radius:17px;
+/************************************* PROPRIETES D'AFFICHAGE DES IMAGES *************************************/
+.logo {
+        max-width: var(--px96);
+        padding: var(--px12);
 }
-/* Images properties for featured products mini */
-.fp-img-mini{
-  margin: auto;
-  width: 100%;
-  border-top-left-radius: 17px;
-  border-bottom-left-radius: 17px;
-}
-/* Images properties for activites mini */
-.activite-img-mini{
-  max-width: -moz-available;
-  width:100%;
-  height:100%;
-  max-height:170px;
-  vertical-align:middle;
-  overflow:hidden;
-  border:4px solid thin white;
-  margin:4px;
-  background-color: white;
-  border-top-left-radius:17px;
-  border-top-right-radius:17px;
-  box-shadow:0px -4px 3px #f2f2f2;
-}
-/*** Header display sttings ***/
-header{
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  display: block;
-  
-}
-.header-top {
-  display: flex;
-  flex-wrap: wrap;
-}
-.header-bottom {
-  display: block;
-  font-size: 11pt;
-}
-/*** Style CSS de la navigation ***/
-.navigation {
-  display:grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  background:#fff;
-  margin-top:0;
-  list-style: none;
-  max-width: 100%;
-  width: 100%;
-  padding:0;
-}
-nav{
-  display: contents;
-}
-.navigation a{
-bottom:0;
-}
-.nav ul li{
-  list-style: none;
-  max-width: 50%;
-}
-.nav-link {
-  padding: 0 1em;
-  border-bottom: 3px solid white;
-}
-.nav-link:hover{
-  padding: 0 1em;
-  text-decoration: none;
-}
-.nav-button{
-  list-style: none;
-  border-bottom: solid 3px white;
-  padding-bottom: 19px !important;
-}
-.nav-button a{
-  color: var(--grey2);
-  text-decoration: none;
-  font-size:1em;
-}
-.nav-button a:hover{
-  color: var(--blue);
-  text-decoration: none;
-  font-size:1em;
-}
-.nav-button:hover{
-  list-style: none;
-  border-bottom: solid 3px var(--blue);
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out !important;
-}
-#inscription{
-  color:var(--blue) !important;
-  font-weight: 700;
-}
-#inscription:hover{
-  color:var(--grey2) !important;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out !important;
-}
-.navhebergement{
-  order:2;
-  padding-top: 10px;
-}
-.navactivites{
-  order:3;
-  padding-top: 10px;
-}
-.navinscription{
-  order: 1;
-  padding-top: 19px;
-  text-align: right;
-}
-/*** fin CSS navigation ***/
-/*** Specification for all the contents of the first horizontal part of the header ***/
-.header-infos {
-  padding: 20px 0;
-  margin: 0 0 25px 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-width: inherit;
-}
-.site-title{
-  padding: 0;
-  margin: 0 0 20px 0;
-  max-width: max-content;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.site-subtitle{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-/*Spécifications d'affichage du champ de recherches */
-.search-bar{
-  border: solid 2px var(--grey);
-  border-radius: 15px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows:1fr;
-  width:100%;
-  scale: 100%;
-  border-radius: 15px;
-  max-width: max-content;
-  margin-bottom: 1%;
-  margin-top: auto;
-}
-.search-i {
-  background: var(--grey);
-  border-top-right-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  padding: 10px !important;
-  border: solid 1px var(--grey);
- 
-}
-.searchfield{
-  border: none;
-  padding: 2px 10px;
-}
-label{
-  background-color: var(--blue);
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
-  color:white;
-  margin:10px;
-}
-#Recherchertxt{
-  background-color: var(--blue);
-  padding:10px;
-  position:absolute;
-}
-/*Spécification boite de filtration */
-#filtres{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  margin-top:auto;
-  margin-bottom:auto;
-}
-.block-filtres{
-  margin-top: auto;
-  margin-bottom: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-#filtres h3{
-  clear:both;
-  margin-top:auto;
-  margin-bottom:auto;
-  padding-top:20px;
-  padding-bottom:20px;
-}
-.filter-title{
-  clear:both;
-  padding: 0 0 25px 0;
-  margin:0;
-}
-.filterfont{
-  padding: 5px !important;
-  margin: 0 7px !important;
-  font-size: smaller;
-}
-#economic-btn{
-  border:var(--grey) solid 2px;
-  border-radius:100px;
-  padding:0px;
-  margin-right:5px;
-}
-#familial-btn{
-  border:var(--grey) solid 2px;
-  border-radius:100px;
-  padding:0px;
-  margin-left:5px;
-}
-#romantic-btn{
-  border:var(--grey) solid 2px;
-  border-radius:100px;
-  padding:0px;
-}
-#animauxok-btn{
-  border:var(--grey) solid 2px;
-  border-radius:100px;
-  padding:0px;
-}
-.filterbuttons{
-  display:flex;
-  flex-wrap: wrap;
-}
-.filter-button{
-  display: block;
-  margin: 10px 0;
-}
-.filter-button a{
-  text-decoration:none;
-  color:#000;
-  padding: 0px 15px;
-  margin-top:auto;
-  margin-bottom:auto;
-}
-/* spécifications ligne d'information */
-.site-info{
-  padding-top:20px;
-  padding-bottom:20px;
-  margin:0;
-}
-.site-info h5 {
-  font-weight: lighter;
-  display: flex;
-}
-/**** Ligne contenant les "hébergements à Marseille" et "les plus populaires" ****/
-#category-frames{
-  margin:0;
-  padding:35px 0 0 0;
-}
-.category-blocks{
-  display:flex;
-  flex-direction: column-reverse;
-}
-/*** STYLE DE LA PARTIE CENTRALE : hébergement - Les plus populaires - Activites ***/
-/*** FEATURED : Spécifications du bloc "Les plus populaires" ***/
-#featured{
-  background-color: var(--grey);
-  margin: 30px 25px;
-}
-.featuredsmart{
-  margin: -25px;
-  background:var(--grey);
-}
-/* Featured product header is necessary because of the icon */
-.featured-product-header {
-  padding: 0;
-  display: grid;
-grid-template-columns: 5fr 1fr;
-}
-.featured-product-header .fa-chart-line{
-background-color: none !important;
-display: block;
-margin-top: 0;
-padding-top: 0 !important;
-}
-/* Block's properties for featured products infos */
-.featured-product-block {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding:6px !important;
-  box-shadow: 0 0 2px #9c9c9c;
-}
-.fptop{
-  margin-top: 14px;
-  margin-bottom: 7px;
-}
-.frmiddle{
-  margin-top: 7px;
-  margin-bottom: 7px;
-}
-.fpbottom{
-  margin-top: 7px;
-  margin-bottom: 14px;
-}
-/* Featured images container */
-/* Les spcécifications relatives à l'affichage des images est disponible en tête de ce fichier */
-.fpimg{
-  margin:0;
-  padding:0;
-}
-/* Featured images container */
-.featured-product-infos{
-  padding: 0 10px 0 25px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
+/***** HBGT ******/
+/*Les dimensions doivent être celle de dektop multiplier par 1.26*/
+/***** PROPRIETES D'AFFICHAGE DES IMAGES *****/
 
-/*** HEBERGEMENTS : Spécifications du bloc "Les plus populaires" ***/
-.block-hebergements{
-  display:flex;
-  flex-direction: column;
-  padding-top:35px;
+/* Images des hébergements hbgt*/
+.image-hbgt{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
 }
-/* ID for "herbergements" product catgory */
-.block-category{
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+.imagecontainer-hbgt {
+        max-width: var(--px300);
+        width: 100%;
+        max-height: var(--px145);
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px15);
+        border-top-right-radius: var(--px15);
+    }
+/* Images des plus populaires lpp */
+/*=dimensions smartphone*/
+.imagecontainer-lpp{
+        width: 100%;
+        max-width: var(--px125);
+        height: 100%;
+        max-height: var(--px135);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px15);
+        border-bottom-left-radius: var(--px15);     
 }
-#hebergements{
-  margin-top:35px;
-  padding: 20px 0;
+.image-lpp{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
 }
-/* Main lodging's block title style - Style du titre du bloc principal "hébergements à Marseilles */
+/* Images des activités actvt */
+/*=dimensions smartphone*/
+.imagecontainer-actvt{
+        max-width:var(--px335);
+        width: 100%;
+        max-height: var(--px135);
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px17);
+        border-top-right-radius: var(--px17);
+        border-radius: var(--px17);
+}
+.image-actvt{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+}
+.actvtbtm.imagecontainer-actvt{
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: var(--px17) !important;
+        border-bottom-right-radius: var(--px17) !important;
+}
+/************************************* ORGANISATION DES SECTIONS *************************************/
+/*Affichage des sections en columns-reverse Comme des le css smartphone: lpp -> Hébergments -> Activités*/
+/*** Propriété des sections ***/
+section{
+        display:flex;
+        flex-direction:column;
+}
+/*** Propriété du bloc des sections "Hébergements" et "les plus populaires" ***/
+.sections-blocks{
+        display:flex;
+        flex-direction: column-reverse;
+        grid-template-rows:auto 1fr;
+        padding:var(--px10);
+        margin:0;
+        gap:var(--px20);
+}
+/*** Affichage de la section des hébergements hbgt ***/
+.section-hbgt{
+        background-color: var(--grey);
+        padding: var(--px20);
+        border-radius: var(--px17);
+}
+/*** Affichage de la section des plus populaires lpp ***/
+.section-lpp {
+        background-color: var(--grey2);
+        padding: var(--px20);
+        border-radius: var(--px17);
+        box-shadow: 0 0 var(--px6) var(--greyshdw);
+        border-left:10px solid var(--blue);
+    }
+/*** Affichage de la section des activités ***/
+.section-actvt{
+        display: flex;
+        flex-direction: column;
+        padding: 0 var(--px5) var(--px40)var(--px5);
+}
+/*** Affichage des catégories = détails des sections ***/
+.category-hbgt{
+        padding: 0 0 0 var(--px2);
+        margin: 0;
+}
 .category-title{
-  width: 100%;
-  color: #000;
-  text-decoration: none;
-  padding:0;
-  margin:0 0 20px 0;
+        padding: 0;
 }
-/* Product Block frame style - Style du cadre bloc Produit*/
-.product-block{
-  background-color: white;
-  border-radius:20px;
-  padding:4px;
-  box-shadow: 0 0 2px #9c9c9c;
+/************************************* DETAILS DES SECTIONS **************************************************/
+/************************************* SECTION DES PLUS POPULAIRES = lpp *************************************/
+.category-lpp {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        background-color: transparent;
 }
-.pb-top{
-  margin-top:14px;
-  margin-bottom: 7px;
+.lpp-header{
+        display: grid;
+        grid-template-rows: auto 1fr;
+        margin: var(--px20) 0 0 var(--px-10);
+        padding: 0;
+        text-align: center;
 }
-.pb-middle{
-  margin-top:7px;
-  margin-bottom: 7px;
+.lpp-header h2 {
+        transform: rotate(270deg);
+        color: white;
+        margin: var(--px10) auto var(--px10) var(--px-30);
+        padding: 0;
+        text-align: right;
+    }
+.block-lpp-block{
+        display:grid;
+        grid-template-columns : 1fr 1fr 1fr;
+	padding: var(--px1) var(--px3);
+	gap: var(--px10);
+        
 }
-.pb-bottom{
-  margin-top:7px;
-  margin-bottom: 14px;
+.lpp-block{
+        display:flex;
+        flex-wrap: nowrap;
+        max-width: var(--px305);
+	width: auto;
+        max-height:var(--px145) ;
+	height: auto;
+	padding: var(--px2);
+        border:solid white var(--px3);
+        background:white;
+        overflow:hidden;
+        border-radius:var(--px17);
 }
-/* Product title style - Style du titre des hébergements */
-.product-infos{
-  display:grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  padding:0;
-  margin-left:14px;
+.lpp-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
 }
-/* Product title style - Style du titre Produit*/
-.product-title{
-  padding:0;
-  margin:0;  
+.lpp-block-infos{
+        display:flex;
+        flex-direction:column;
+        max-width: var(--px150);
+        width:100%;
+        max-height: var(--px135);
+        height:100%;
+        background:white;
+        padding-left:var(--px14);
+        margin:auto;
+        text-align:left;
 }
-/* Product title style - Style du titre Produit*/
-.product-desc{
-  color:var(--grey2);
-  padding:0;
+.lpp-title{
+	margin: var(--px14) 0 0 0;
+        padding:0;
+	
 }
-/** Les p^ropriétés d'affichage des étoiles des votes est visible dans le bloc de propriétés "productrating" **/
-/* Afficher plus */
-#afficherplus{
-  font-size:1.05em;
-  padding:30px 0 0 0x;
+.lpp-desc{
+	padding: 0;
+	margin: var(--px14) 0 var(--px30) 0;
 }
-/*** Spécifications d'affichage pour le bloc ACTIVITES ***/
+/************************************* SECTION DES HÉBERGEMENTS = hbgt ***************************************/
+/** Propriétés d'affichage du block constitué seulement par les blocks de chaque hébergement **/
+.block-hbgt-block{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: var(--px20);
+        padding: 0;
+        margin: var(--px10);
+}
+/* Propriétés d'affichage du block d'un hébergement*/
+.hbgt-block {
+        padding: var(--px7) var(--px7) 0 var(--px7);
+        box-shadow: 0 0 var(--px6) var(--greyshdw);
+        border-radius: var(--px17);
+        background: #fff;
+        max-width: var(--px314);
+        max-height: var(--px255);
+        width: 100%;
+        height: 100%;
+}
+.hbgt-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
+}
+.hbgt-block-infos{
+        /*display:flex;
+        flex-direction:column;
+        padding:0 var(--px14);*/
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        max-height: var(--px85);
+}
+.hbgt-block h4{
+        font-size: var(--px18) !important;
+}
+.category-title.links {
+        margin: 0 0 var(--px10) var(--px10);
+    }
+.hbgt-title{
+        padding: var(--px1) 0 0 0;
+        margin: var(--px2) 0 var(--px2) var(--px5);
+}
+.hbgt-desc{
+        padding: 0;
+        margin: var(--px2) 0 var(--px2) var(--px5);
+}
+#afficherplus {
+        padding: var(--px10) 0 var(--px10) var(--px10);
+        margin: 0;
+    }
+#afficherplus h3 {
+        font-size: var(--px17) !important;
+        font-weight: bolder;
+        padding:var(--px20px) 0;
+}
+/************************************* SECTION DES ACTIVITÉS = actvt *****************************************/
+.block-actvt-block{
+        display: flex;
+        /*grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;*/
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--px10);
+        padding:var(--px5);
+        margin: auto;
+        width:var(--px1045);
+        height:var(--px410);
+}
+/* Propriétés d'affichage du block d'un hébergement*/
 #activites{
-  clear: both;
-  margin: 0px;
-  display:flex;
-  flex-direction:column;
-  padding:0 0 30px 0;
+        border-top:solid thin var(--greyfont);
 }
-.bloc-activites{
-  width: 100%;
-  box-shadow: 0px 4px 6px var(--grey2);
-  border-radius: 20px;
-  display: block;
-  height: 240px;
-  max-height: 240px;
-  margin-top: 30px;
+.actvt-block {
+        padding: 0;
+        box-shadow: 0 0 var(--px6) var(--greyshdw);
+        border-radius: var(--px17);
+        background: #fff;
+        display: inline-grid;
+        width: var(--px335);
+        max-width: 96%;
+        height:var(--px190);
+        border-radius: var(--px17);
 }
-.activite-title{
-  padding:0;
-  margin:30px 0 17px 25px;
+.actvt-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
+}
+#activites h2{
+        padding: var(--px15) 0;
 }
 .actitle{
-  padding-top: 17px;
-  padding-left: 25px;
+        padding: var(--px10) 0 var(--px10) var(--px20);
+        margin: 0;
 }
+.block-actvt-1row {
+        max-height: min-content;
+        display:flex;
+        height: 0;
+}
+.block-actvt-2rows {
+        max-height: min-content;
+        height: 0;
+        display:flex;
+}
+.actvtbtm{
+        display:flex;
+        flex-direction: column-reverse;
+
+        border-radius: var(--px17);     
+}
+.actvtbtm img {
+        /*border-bottom-left-radius: var(--px17) !important;
+        border-bottom-right-radius: var(--px17) !important;*/
+        border-radius: var(--px17);
+}
+/************************************* FIN DES DES SECTIONS **************************************************/
+
 /** Spécification de l'affichage du footer **/
 footer{
-  padding: 30px 0 0 16px;
-  margin: 31px 0 35px 0;
-  background: var(--grey);
-}
-.footer-title{
-padding-bottom:0;
-margin-bottom:29px;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        padding:var(--px);
+        background:var(--grey);
 }
 .footer-links-block{
-  margin: auto;
-  margin-left: auto;
-  padding: 30px 0;
-  margin-left: 26px;
+        display:flex;
+        flex-direction:column;
+        margin:auto;
+        margin-left:0;
+        padding-left:0;
+        align-items: flex-start;
+        padding:var(--px20);
+}
+.footer-title{
+        padding-bottom:0;
+        margin-bottom:0;
 }
 .footer-links-list ul {
-  padding-left: 0;
+        padding-left: 0;
 }
 .footer-links-list li{
-  margin-top:12px;
-  margin-bottom:12px;
-  list-style: none;
+        margin-top:var(--px5);
+        margin-bottom:var(--px5);
+        list-style: none;
 }
 .footer-links-list a{
-  text-decoration: none;
-  color:#000;
+        text-decoration: none;
 }
+/** Fin de spécifications du footer **/
+/** CHAMPS CACHÉS **/
+.dktpaimg{
+        display:none;
+}
+.header-tbtt{
+        display:none;
+}
+.fa-smart{
+        display:none !important;
+}
+.hdn-class-dsktp{
+        display:none;
+}
+}
+/*Spécifications pour l'utilisation des icones de font-awesome*/
+/****** FIN DU CSS TABLETTES MIN WIDTH 681PX MAX WIDTH 1101PX ******/
