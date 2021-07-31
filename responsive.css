@@ -802,6 +802,7 @@ section{
         display:flex;
         flex-direction:column;
         margin:0 var(--px10);
+        gap: var(--px40);
 }
 /*** Propriété du bloc des sections "Hébergements" et "les plus populaires" ***/
 .sections-blocks{
