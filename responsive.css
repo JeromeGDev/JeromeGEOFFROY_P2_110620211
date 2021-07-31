@@ -131,7 +131,7 @@ p{/*10pts (=13px) sur maquette 375px*/
 .searchfont{
         font-family:'ralewaymedium', sans-serif;
         letter-spacing: 0.06em;
-        font-weight: 500;
+        font-weight: 700;
         margin:0;
         padding:0;
 }
@@ -690,6 +690,7 @@ label {
         --px106:7.36111111111111vw;
         --px410:28.4722222222222vw;
         --px600:41.6666666666667vw;
+        --px625:43.4027777777778vw;
         --px680:47.2222222222222vw;
         --px681:47.2916666666667vw;
         --px802:55.6944444444444vw;
@@ -809,6 +810,7 @@ section{
         padding:var(--px40) var(--px5);
         margin:0;
         gap:var(--px40);
+        height: var(--px625);
 }
 /*** Affichage de la section des hébergements hbgt ***/
 .section-hbgt {
@@ -845,7 +847,7 @@ section{
         grid-template-rows: 1fr 1fr;
         gap: var(--px30);
         padding: 0;
-        margin: var(--px20) 0 var(--px40) 0;
+        margin: var(--px30) 0 var(--px40) 0;
 }
 /* Propriétés d'affichage du block d'un hébergement*/
 .hbgt-block {
@@ -873,12 +875,12 @@ section{
         padding: var(--px3) 0 var(--px3) 0;
 }
 #afficherplus{
-        padding: 0;
         margin: 0;
+        padding: var(--px10) 0 0 0;
 }
 #afficherplus h3 {
         /*font-size: var(--px17)*/
-        font-size:1.0625em !important;
+        font-size:1.125em !important;
         font-weight: bolder;
         }
 /****** SECTION : LES PLUS POPULAIRES ******/
