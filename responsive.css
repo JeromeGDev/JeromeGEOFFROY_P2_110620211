@@ -73,7 +73,8 @@
 }*/
 /**** DEBUT DU CSS POUR IPHONES AND SMARTPHONES MAX WIDTH 681PX ****/
 h1{/*16pts (=21px) sur maquette 375px*/
-        font-size: var(--px21);
+        /*font-size: var(--px21);*/
+        font-size:1.3125em;
         font-weight:500;
         color:#000;
         padding: 0;
@@ -81,7 +82,8 @@ h1{/*16pts (=21px) sur maquette 375px*/
 }
 h2{/*16pts (21px) sur maquette 375px*/
         font-family:'ralewaybold', sans-serif;
-        font-size: var(--px21);
+        /*font-size: var(--px21);*/
+        font-size:1.3125em;
         letter-spacing: 0.02em;
         font-weight: 500;
         color:#000;
@@ -90,7 +92,8 @@ h2{/*16pts (21px) sur maquette 375px*/
 }
 h3{/*13pts (=17px) sur maquette 375px*/
         font-family:'ralewayregular', sans-serif;
-        font-size: var(--px17);
+        /*font-size: var(--px17);*/
+        font-size:1.0625em;
         font-weight:700;
         color:#000;
         padding: 0;
@@ -98,7 +101,8 @@ h3{/*13pts (=17px) sur maquette 375px*/
 }
 h4{/*12pts (=16px) sur maquette 375px*/
         font-family: 'ralewaybold', sans-serif;
-        font-size:var(--px16);
+        /*font-size:var(--px16);*/
+        font-size:1em;
         font-weight:500;
         color:#000;
         padding: 0;
@@ -106,7 +110,8 @@ h4{/*12pts (=16px) sur maquette 375px*/
 }
 h5{/*13pts (=13px) sur maquette 375px*/
         font-family:'ralewayregular', sans-serif;
-        font-size:var(--px17);
+        /*font-size:var(--px17);*/
+        font-size:0.8125em;
         font-weight:700;
         color:black;
         padding: 0;
@@ -114,7 +119,8 @@ h5{/*13pts (=13px) sur maquette 375px*/
 }
 h6{/*12pts (=16px) sur maquette 375px*/
         font-family:'ralewayregular', sans-serif;
-        font-size:var(--px16);
+        /*font-size:var(--px16);*/
+        font-size:1em;
         font-weight:500;
         color:black;
         padding: 0;
@@ -122,7 +128,8 @@ h6{/*12pts (=16px) sur maquette 375px*/
 }
 p{/*10pts (=13px) sur maquette 375px*/
         font-family:'ralewayregulard', sans-serif;
-        font-size :var(--px13);
+        /*font-size :var(--px13);*/
+        font-size:0.8125em;
         font-weight:500;
         letter-spacing: 0.02em;
         color:#000;
@@ -140,7 +147,8 @@ p{/*10pts (=13px) sur maquette 375px*/
         font-family:'ralewaybold', sans-serif;
         padding: 0 var(--px20) 0 0;
         margin: auto var(--px20) auto var(--px10);
-        font-size:var(--px16);
+        /*font-size:var(--px16);*/
+        font-size:1em;
         font-weight: 500;
 }
 .filterfont:hover{
@@ -152,28 +160,32 @@ p{/*10pts (=13px) sur maquette 375px*/
 }
 .nav-link {/*12pts (=16px) sur la maquette 375px - taille de police des liens de la navugation en haut de page*/
         font-family:'ralewayregular', sans-serif;
-        font-size: var(--px16);
+        /*font-size: var(--px16);*/
+        font-size:1em;
         font-weight: 300;
         margin:0;
         padding:0;
 }
 .nav-link #inscription {/*12pts (=16px) sur la maquette 375px - taille de police des liens de la navugation en haut de page*/
         font-family:'ralewayregular', sans-serif;
-        font-size:var(--px16);
+        /*font-size:var(--px16);*/
+        font-size:1em;
         font-weight: 700;
         margin:0;
         padding:0;
 }
 .footertitlefont{/*13pts =17px sur maquette 375px*/
         font-family:'ralewayregular', sans-serif;
-        font-size: var(--px17);
+        /*font-size: var(--px17);*/
+        font-size:1.0625em;
         font-weight: 700;
         margin:0;
         padding:0;
 }
 .footerlinksfont{/*11pts (=15px) sur maquette 375px*/
         font-family:'ralewayregular', sans-serif;
-        font-size: var(--px15);
+        /*font-size: var(--px15);*/
+        font-size:0.9375em;
         font-weight: 300;
         margin:0;
         padding:0;
@@ -268,7 +280,8 @@ a:focus{
 .nav-button a{
         color: var(--grey2);
         text-decoration: none;
-        font-size:var(--px16);
+        /*font-size:var(--px16);*/
+        font-size:1em;
 }
 .nav-button a:hover{
         color: var(--blue);
@@ -302,7 +315,8 @@ form {
         grid-template-columns: 2fr 7fr 2fr;
 }
 .search-i {
-        font-size:var(--px17);
+        /*font-size:var(--px17);*/
+        font-size:1.0625em;
         display: inline-grid;
 }
 .fa-cont-l {
@@ -336,7 +350,8 @@ form {
 .fa-search {
         margin: auto;
         padding: var(--px10) 0 0 var(--px20);
-        font-size: var(--px17);
+        /*font-size: var(--px17);*/
+        font-size:1.0625em;
 }
 #Rechercher{
         padding: 0 0 0 var(--px30);
@@ -352,7 +367,8 @@ form {
         color:white;
         vertical-align: middle;
         font-family:'ralewayregular', sans-serif;
-        font-size: var(--px17);
+        /*font-size: var(--px17);*/
+        font-size:1.0625em;
         font-weight: 700;
         margin:0;
         padding:0;
@@ -438,11 +454,13 @@ label {
         background-color: #fff;
         margin: 0 var(--px11) 0 0;
         text-align: center;
-        font-size: var(--px11);
+        /*font-size: var(--px11);*/
+        font-size:0.6875em;
         padding: var(--px3) var(--px6);
 }
 .fa-map-marker-alt {
-        font-size: var(--px17);
+        /*font-size: var(--px17);*/
+        font-size:1.0625em;
         color:#000;
 }
 .fa-map-marker-alt:hover{
@@ -456,7 +474,8 @@ label {
         float: right;
         margin: auto 0 auto auto;
         padding: 0;
-        font-size: var(--px20);
+        /*font-size: var(--px20);*/
+        font-size:1.25em;
         text-align: right;
 }
 .fas{
@@ -694,7 +713,8 @@ h1{/*16pts (=21px) sur maquette 1440px*/
         letter-spacing: 0.014em;
 }
 .searchfont{/*12pts (=16px) sur maquette 1440px*/
-        font-size: var(--px16);
+        /*font-size: var(--px16);*/
+        font-size:1em;
 }
 /*** Spécification de la page en page générale ***/
 body {
@@ -864,6 +884,7 @@ section{
 }
 #afficherplus h3 {
         font-size: var(--px17) !important;
+        font-size:1.0625em;
         font-weight: bolder;
         }
 /****** SECTION : LES PLUS POPULAIRES ******/
@@ -978,7 +999,8 @@ h4.actitle {
 /* Propriété d'affichage des icones FA */
 .fa-star{
         color:#cbcbcb;
-        font-size:var(--px10);
+        /*font-size:var(--px10);*/
+        font-size:0.625em;
         padding:var(--px2);
 }
 .starok{
@@ -1032,6 +1054,608 @@ footer {
 }
 }
 /********** FIN DU CSS DESKTOP MIN WIDTH 1101PX ************/
+/*******************************************************************/
+/** DEBUT DU CSS POUR TABLETTES MIN WIDTH 681PX MAX WIDTH 1100PX - BASE SUR UNE MAQUETTE EN 100PX**/
+@media screen and (min-width:681px) and (max-width:1100px){
+        /***** CSS page RESERVIA ****/
+:root{
+        --px-35:-3.18181818181818vw;
+        --px-30:-2.72727272727273vw;
+        --px-25:-2.27272727272727vw;
+        --px-20:-1.81818181818182vw;
+        --px-15:-1.36363636363636vw;
+        --px-10:-0.909090909090909vw;
+        --px-3:-0.272727272727273vw;
+        --px-1:-0.0909090909090909vw;
+        --px1:0.0909090909090909vw;
+        --px2:0.181818181818182vw;
+        --px3:0.272727272727273vw;
+        --px4:0.363636363636364vw;
+        --px5:0.454545454545455vw;
+        --px6:0.545454545454545vw;
+        --px7:0.636363636363636vw;
+        --px8:0.727272727272727vw;
+        --px9:0.818181818181818vw;
+        --px10:0.909090909090909vw;
+        --px11:1vw;
+        --px12:1.09090909090909vw;
+        --px13:1.18181818181818vw;
+        --px14:1.27272727272727vw;
+        --px15:1.36363636363636vw;
+        --px16:1.45454545454545vw;
+        --px17:1.54545454545455vw;
+        --px18:1.63636363636364vw;
+        --px19:1.72727272727273vw;
+        --px20:1.81818181818182vw;
+        --px21:1.90909090909091vw;
+        --px22:2vw;
+        --px23:2.09090909090909vw;
+        --px24:2.18181818181818vw;
+        --px25:2.27272727272727vw;
+        --px26:2.36363636363636vw;
+        --px27:2.45454545454545vw;
+        --px28:2.54545454545455vw;
+        --px29:2.63636363636364vw;
+        --px30:2.72727272727273vw;
+        --px31:2.81818181818182vw;
+        --px32:2.90909090909091vw;
+        --px33:3vw;
+        --px34:3.09090909090909vw;
+        --px35:3.18181818181818vw;
+        --px36:3.27272727272727vw;
+        --px37:3.36363636363636vw;
+        --px38:3.45454545454545vw;
+        --px39:3.54545454545455vw;
+        --px40:3.63636363636364vw;
+        --px41:3.72727272727273vw;
+        --px42:3.81818181818182vw;
+        --px43:3.90909090909091vw;
+        --px44:4vw;
+        --px45:4.09090909090909vw;
+        --px46:4.18181818181818vw;
+        --px47:4.27272727272727vw;
+        --px48:4.36363636363636vw;
+        --px49:4.45454545454546vw;
+        --px50:4.54545454545455vw;
+        --px51:4.63636363636364vw;
+        --px52:4.72727272727273vw;
+        --px53:4.81818181818182vw;
+        --px54:4.90909090909091vw;
+        --px55:5vw;
+        --px56:5.09090909090909vw;
+        --px57:5.18181818181818vw;
+        --px58:5.27272727272727vw;
+        --px59:5.36363636363636vw;
+        --px60:5.45454545454546vw;
+        --px61:5.54545454545455vw;
+        --px62:5.63636363636364vw;
+        --px63:5.72727272727273vw;
+        --px64:5.81818181818182vw;
+        --px65:5.90909090909091vw;
+        --px66:6vw;
+        --px67:6.09090909090909vw;
+        --px68:6.18181818181818vw;
+        --px69:6.27272727272727vw;
+        --px70:6.36363636363636vw;
+        --px71:6.45454545454546vw;
+        --px72:6.54545454545455vw;
+        --px73:6.63636363636364vw;
+        --px74:6.72727272727273vw;
+        --px75:6.81818181818182vw;
+        --px76:6.90909090909091vw;
+        --px77:7vw;
+        --px78:7.09090909090909vw;
+        --px79:7.18181818181818vw;
+        --px80:7.27272727272727vw;
+        --px81:7.36363636363636vw;
+        --px82:7.45454545454546vw;
+        --px83:7.54545454545455vw;
+        --px84:7.63636363636364vw;
+        --px85:7.72727272727273vw;
+        --px86:7.81818181818182vw;
+        --px87:7.90909090909091vw;
+        --px88:8vw;
+        --px89:8.09090909090909vw;
+        --px90:8.18181818181818vw;
+        --px91:8.27272727272727vw;
+        --px92:8.36363636363636vw;
+        --px93:8.45454545454546vw;
+        --px94:8.54545454545454vw;
+        --px95:8.63636363636364vw;
+        --px96:8.72727272727273vw;
+        --px97:8.81818181818182vw;
+        --px98:8.90909090909091vw;
+        --px99:9vw;
+        --px100:9.09090909090909vw;
+        --px105:9.54545454545454vw;
+        --px106:9.63636363636364vw;
+        --px115:10.4545454545455vw;
+        --px125:11.3636363636364vw;
+        --px130:11.8181818181818vw;
+        --px135:12.2727272727273vw;
+        --px145:13.1818181818182vw;
+        --px150:13.6363636363636vw;
+        --px172:15.6363636363636vw;
+        --px190:17.2727272727273vw;
+        --px192:17.4545454545455vw;
+        --px225:20.4545454545455vw;
+        --px290:26.3636363636364vw;
+        --px296:26.9090909090909vw;
+        --px305:27.7272727272727vw;
+        --px314:28.5454545454545vw;
+        --px325:29.5454545454545vw;
+        --px335:30.4545454545455vw;
+        --px345:31.3636363636364vw;
+        --px410:37.2727272727273vw;
+        --px600:54.5454545454545vw;
+        --px680:61.8181818181818vw;
+        --px681:61.9090909090909vw;
+        --px938:85.2727272727273vw;
+        --px1020:92.7272727272727vw;
+        --px1045:95vw;
+        --px1100:100vw;
+        --px1101:100.090909090909vw;
+        }
+/*Spécifications pour l'utilisation des icones de font-awesome*/
+.fas{
+        margin:auto;
+        border-radius:var(--px50);
+}
+.fa-money-bill-wave{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+.fa-child{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding:var(--px10) var(--px12);
+}
+.fa-heart{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+.fa-dog{
+        color:var(--blue);
+        border-radius:var(--px50);
+        background-color:var(--bluecl);
+        vertical-align:middle;
+        padding: var(--px10);
+}
+/*.fa-info{
+        color: var(--blue)  !important;
+        border-radius: var(--px50);
+        border: solid var(--grey) var(--px2);
+        border-collapse: collapse;
+        background-color: #fff;
+        margin: 0 var(--px11) 0 0;
+        text-align: center;
+        font-size: var(--px11);
+        padding: var(--px) var(--px4);
+}*/
+.fas.fa-chart-line {
+        margin: var(--px30) auto 0 auto;
+        padding: 0;
+        position: relative;
+        /*font-size: var(--px25);*/
+        font-size:1.5625em;
+}
+.links:hover{
+        cursor:pointer;
+}
+/************************************* CSS RESERVIA MODE TABLETTE 680PX - 1100PX *************************************/
+/* Particularités de polices */
+h1{/*16pts (=21px) sur maquette 1440px*/
+        font-family:'ralewaymedium', sans-serif;
+        letter-spacing:0.014em;
+}
+.searchfont{/*12pts (=16px) sur maquette 1440px*/
+        /*font-size: var(--px16);*/
+        font-size:1em;
+}
+h4{
+        /*font-size:var(--px15);*/
+        font-size:0.9375em;
+}
+/*** Spécification de la page en page générale ***/
+body{
+        width:94.6%;
+        margin:auto;
+        max-width:100vw;
+        padding:2.7%;
+}
+.container-fluid{
+        padding:0;
+        width:100%;
+        max-width: 100%;
+        margin:auto;
+}
+.page{
+        padding:0;
+        margin:auto;
+        width:100%;
+        max-width: 100%;
+}
+.fa-search{
+        display:none !important;
+}
+/*Spécifications de l'apparence du système de vote*/
+.hbgt-rating{
+        margin: 0;
+        padding: 0;
+        display:flex;
+        /*font-size:var(--px10);*/
+        font-size:0.625em;
+        position:relative;
+}
+.lpp-rating{
+        margin: 0;
+        padding: 0;
+        display:flex;
+        /*font-size:var(--px10);*/
+        font-size:0.625em;
+        position:relative;
+}
+.fa-star {
+        padding:1px;
+        margin:1px;
+        color:var(--grey2);
+}
+.starok{
+        color:var(--blue);
+}
+/************************************* PROPRIETES D'AFFICHAGE DES IMAGES *************************************/
+.logo {
+        max-width: var(--px96);
+        padding: var(--px12);
+}
+/***** HBGT ******/
+/*Les dimensions doivent être celle de dektop multiplier par 1.26*/
+/***** PROPRIETES D'AFFICHAGE DES IMAGES *****/
+
+/* Images des hébergements hbgt*/
+.image-hbgt{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+}
+.imagecontainer-hbgt {
+        max-width: var(--px300);
+        width: 100%;
+        max-height: var(--px145);
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px15);
+        border-top-right-radius: var(--px15);
+    }
+/* Images des plus populaires lpp */
+/*=dimensions smartphone*/
+.imagecontainer-lpp{
+        width: 100%;
+        max-width: var(--px125);
+        height: 100%;
+        max-height: var(--px135);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px15);
+        border-bottom-left-radius: var(--px15);     
+}
+.image-lpp{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+/* Images des activités actvt */
+/*=dimensions smartphone*/
+.imagecontainer-actvt{
+        max-width:var(--px335);
+        width: 100%;
+        max-height: var(--px135);
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        border-top-left-radius: var(--px17);
+        border-top-right-radius: var(--px17);
+        border-radius: var(--px17);
+}
+.image-actvt{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+}
+.actvtbtm.imagecontainer-actvt{
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: var(--px17) !important;
+        border-bottom-right-radius: var(--px17) !important;
+}
+/************************************* ORGANISATION DES SECTIONS *************************************/
+/*Affichage des sections en columns-reverse Comme des le css smartphone: lpp -> Hébergments -> Activités*/
+/*** Propriété des sections ***/
+section{
+        display:flex;
+        flex-direction:column;
+}
+/*** Propriété du bloc des sections "Hébergements" et "les plus populaires" ***/
+.sections-blocks{
+        display:flex;
+        flex-direction: column-reverse;
+        grid-template-rows:auto 1fr;
+        padding:var(--px10);
+        margin:0;
+        gap:var(--px20);
+}
+/*** Affichage de la section des hébergements hbgt ***/
+.section-hbgt{
+        background-color: var(--grey);
+        padding: var(--px20);
+        border-radius: var(--px17);
+}
+/*** Affichage de la section des plus populaires lpp ***/
+.section-lpp {
+        background-color: var(--grey2);
+        padding: var(--px20);
+        border-radius: var(--px17);
+        box-shadow: 0 0 var(--px6) var(--greyshdw);
+        border-left:10px solid var(--blue);
+    }
+/*** Affichage de la section des activités ***/
+.section-actvt{
+        display: flex;
+        flex-direction: column;
+        padding: 0 var(--px5) var(--px40)var(--px5);
+}
+/*** Affichage des catégories = détails des sections ***/
+.category-hbgt{
+        padding: 0 0 0 var(--px2);
+        margin: 0;
+}
+.category-title{
+        padding: 0;
+}
+/************************************* DETAILS DES SECTIONS **************************************************/
+/************************************* SECTION DES PLUS POPULAIRES = lpp *************************************/
+.category-lpp {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        background-color: transparent;
+}
+.lpp-header{
+        display: grid;
+        grid-template-rows: auto 1fr;
+        margin: var(--px20) 0 0 var(--px-10);
+        padding: 0;
+        text-align: center;
+}
+.lpp-header h2 {
+        transform: rotate(270deg);
+        color: white;
+        margin: var(--px10) auto var(--px10) var(--px-30);
+        padding: 0;
+        text-align: right;
+    }
+.block-lpp-block{
+        display:grid;
+        grid-template-columns : 1fr 1fr 1fr;
+	padding: var(--px1) var(--px3);
+	gap: var(--px10);
+        
+}
+.lpp-block{
+        display:flex;
+        flex-wrap: nowrap;
+        max-width: var(--px305);
+	width: auto;
+        max-height:var(--px145) ;
+	height: auto;
+	padding: var(--px2);
+        border:solid white var(--px3);
+        background:white;
+        overflow:hidden;
+        border-radius:var(--px17);
+}
+.lpp-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
+}
+.lpp-block-infos{
+        display:flex;
+        flex-direction:column;
+        max-width: var(--px150);
+        width:100%;
+        max-height: var(--px135);
+        height:100%;
+        background:white;
+        padding-left:var(--px14);
+        margin:auto;
+        text-align:left;
+}
+.lpp-title{
+	margin: var(--px14) 0 0 0;
+        padding:0;
+	
+}
+.lpp-desc{
+	padding: 0;
+	margin: var(--px14) 0 var(--px30) 0;
+}
+/************************************* SECTION DES HÉBERGEMENTS = hbgt ***************************************/
+/** Propriétés d'affichage du block constitué seulement par les blocks de chaque hébergement **/
+.block-hbgt-block{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: var(--px20);
+        padding: 0;
+        margin: var(--px10);
+}
+/* Propriétés d'affichage du block d'un hébergement*/
+.hbgt-block {
+        padding: var(--px7) var(--px7) 0 var(--px7);
+        box-shadow: 0 0 var(--px6) var(--greyshdw);
+        border-radius: var(--px17);
+        background: #fff;
+        max-width: var(--px314);
+        max-height: var(--px255);
+        width: 100%;
+        height: 100%;
+}
+.hbgt-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
+}
+.hbgt-block-infos{
+        /*display:flex;
+        flex-direction:column;
+        padding:0 var(--px14);*/
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        max-height: var(--px85);
+}
+.hbgt-block h4{
+        /*font-size: var(--px18);*/ ;
+        font-size:1.125em !important;
+}
+.category-title.links {
+        margin: 0 0 var(--px10) var(--px10);
+    }
+.hbgt-title{
+        padding: var(--px1) 0 0 0;
+        margin: var(--px2) 0 var(--px2) var(--px5);
+}
+.hbgt-desc{
+        padding: 0;
+        margin: var(--px2) 0 var(--px2) var(--px5);
+}
+#afficherplus {
+        padding: var(--px10) 0 var(--px10) var(--px10);
+        margin: 0;
+    }
+#afficherplus h3 {
+        /*font-size: var(--px17)*/
+        font-size:1.0625em !important;;
+        font-weight: bolder;
+        padding:var(--px20px) 0;
+}
+/************************************* SECTION DES ACTIVITÉS = actvt *****************************************/
+.block-actvt-block{
+        display: flex;
+        /*grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;*/
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--px10);
+        padding:var(--px5);
+        margin: auto;
+        width:var(--px1045);
+        height:var(--px410);
+}
+/* Propriétés d'affichage du block d'un hébergement*/
+#activites{
+        border-top:solid thin var(--greyfont);
+}
+.actvt-block {
+        padding: 0;
+        box-shadow: 0 0 var(--px6) var(--greyshdw);
+        border-radius: var(--px17);
+        background: #fff;
+        display: inline-grid;
+        width: var(--px335);
+        max-width: 96%;
+        height:var(--px190);
+        border-radius: var(--px17);
+}
+.actvt-block:hover{
+        box-shadow: 0 0 var(--px6) var(--blue); 
+}
+#activites h2{
+        padding: var(--px15) 0;
+}
+.actitle{
+        padding: var(--px10) 0 var(--px10) var(--px20);
+        margin: 0;
+}
+.block-actvt-1row {
+        max-height: min-content;
+        display:flex;
+        height: 0;
+}
+.block-actvt-2rows {
+        max-height: min-content;
+        height: 0;
+        display:flex;
+}
+.actvtbtm{
+        display:flex;
+        flex-direction: column-reverse;
+
+        border-radius: var(--px17);     
+}
+.actvtbtm img {
+        /*border-bottom-left-radius: var(--px17) !important;
+        border-bottom-right-radius: var(--px17) !important;*/
+        border-radius: var(--px17);
+}
+/************************************* FIN DES DES SECTIONS **************************************************/
+
+/** Spécification de l'affichage du footer **/
+footer{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        padding:var(--px);
+        background:var(--grey);
+}
+.footer-links-block{
+        display:flex;
+        flex-direction:column;
+        margin:auto;
+        margin-left:0;
+        padding-left:0;
+        align-items: flex-start;
+        padding:var(--px20);
+}
+.footer-title{
+        padding-bottom:0;
+        margin-bottom:0;
+}
+.footer-links-list ul {
+        padding-left: 0;
+}
+.footer-links-list li{
+        margin-top:var(--px5);
+        margin-bottom:var(--px5);
+        list-style: none;
+}
+.footer-links-list a{
+        text-decoration: none;
+}
+/** Fin de spécifications du footer **/
+/** CHAMPS CACHÉS **/
+.dktpaimg{
+        display:none;
+}
+.header-tbtt{
+        display:none;
+}
+.fa-smart{
+        display:none !important;
+}
+.hdn-class-dsktp{
+        display:none;
+}
+}
+/****** FIN DU CSS TABLETTES MIN WIDTH 681PX MAX WIDTH 1101PX ******/
 /*******************************************************************/
 /********** DEBUT DU CSS SMARTPHONES MAX WIDTH 680PX - BASÉ SUR UNE MAQUETTE EN 375PX ************/
 @media screen and (max-width:680px){
@@ -1219,11 +1843,13 @@ footer {
 h1{/*16pts (=21px) sur maquette 375px*/
         font-family:'ralewaybold', sans-serif;
         letter-spacing: 0.07em;
-        font-size: var(--px16);
+        /*font-size: var(--px16)*/;
+        font-size:1em;
 }
 .filterfont{
         font-family:'ralewayregular', sans-serif;
-        font-size: var(--px16);
+        /*font-size: var(--px16);*/
+        font-size:1em;
         font-weight: 700;
         margin:auto var(--px20);
         padding:0;
@@ -1234,7 +1860,8 @@ h1{/*16pts (=21px) sur maquette 375px*/
 }
 .searchfont{/*13pts (=17px) sur maquette 375px*/
         font-family:'ralewayregular', sans-serif;
-        font-size: var(--px17);
+        /*font-size: var(--px17);*/
+        font-size:1.0625em;
         font-weight: 700;
         letter-spacing:0.057em;
 }
@@ -1527,7 +2154,8 @@ form {
         background-color: #fff;
         margin: var(--px5);
         text-align: center;
-        font-size: var(--px11) !important;
+        /*font-size: var(--px11);*/
+        font-size:0.6875em !important;
         padding: var(--px4) var(--px9) !important;
         margin: 0 var(--px12) 0 0 !important;
 }
@@ -1644,7 +2272,8 @@ section {
         float: right;
         margin: auto 0 auto auto;
         padding: 0;
-        font-size: var(--px20);
+        /*font-size: var(--px20);*/
+        font-size:1.25em;
         text-align: right;
 }
 /** Propriétés d'affichage du block constitué seulement par les blocks de chaque plus populaire **/
@@ -1768,7 +2397,7 @@ section {
         padding: 0 0 var(--px8) 0;
 }
 #afficherplus{
-        padding: var(--px20) 0;
+        display:none;
 }
 /*Spécifications de l'apparence du système de vote*/
 .hbgt-rating{
@@ -1797,7 +2426,8 @@ section {
 }
 .fa-star{
         color:#cbcbcb;
-        font-size:var(--px12);
+        /*font-size:var(--px12);*/
+        font-size:0.75em;
         padding:var(--px1);
 }
 .starok{
@@ -1884,599 +2514,3 @@ footer {
 }
 }
 /***** FIN DU CSS POUR IPHONES AND SMARTPHONES MAX WIDTH 680PX *****/
-/*******************************************************************/
-/** DEBUT DU CSS POUR TABLETTES MIN WIDTH 681PX MAX WIDTH 1100PX - BASE SUR UNE MAQUETTE EN 100PX**/
-@media screen and (min-width:681px) and (max-width:1100px){
-        /***** CSS page RESERVIA ****/
-:root{
-        --px-35:-3.18181818181818vw;
-        --px-30:-2.72727272727273vw;
-        --px-25:-2.27272727272727vw;
-        --px-20:-1.81818181818182vw;
-        --px-15:-1.36363636363636vw;
-        --px-10:-0.909090909090909vw;
-        --px-3:-0.272727272727273vw;
-        --px-1:-0.0909090909090909vw;
-        --px1:0.0909090909090909vw;
-        --px2:0.181818181818182vw;
-        --px3:0.272727272727273vw;
-        --px4:0.363636363636364vw;
-        --px5:0.454545454545455vw;
-        --px6:0.545454545454545vw;
-        --px7:0.636363636363636vw;
-        --px8:0.727272727272727vw;
-        --px9:0.818181818181818vw;
-        --px10:0.909090909090909vw;
-        --px11:1vw;
-        --px12:1.09090909090909vw;
-        --px13:1.18181818181818vw;
-        --px14:1.27272727272727vw;
-        --px15:1.36363636363636vw;
-        --px16:1.45454545454545vw;
-        --px17:1.54545454545455vw;
-        --px18:1.63636363636364vw;
-        --px19:1.72727272727273vw;
-        --px20:1.81818181818182vw;
-        --px21:1.90909090909091vw;
-        --px22:2vw;
-        --px23:2.09090909090909vw;
-        --px24:2.18181818181818vw;
-        --px25:2.27272727272727vw;
-        --px26:2.36363636363636vw;
-        --px27:2.45454545454545vw;
-        --px28:2.54545454545455vw;
-        --px29:2.63636363636364vw;
-        --px30:2.72727272727273vw;
-        --px31:2.81818181818182vw;
-        --px32:2.90909090909091vw;
-        --px33:3vw;
-        --px34:3.09090909090909vw;
-        --px35:3.18181818181818vw;
-        --px36:3.27272727272727vw;
-        --px37:3.36363636363636vw;
-        --px38:3.45454545454545vw;
-        --px39:3.54545454545455vw;
-        --px40:3.63636363636364vw;
-        --px41:3.72727272727273vw;
-        --px42:3.81818181818182vw;
-        --px43:3.90909090909091vw;
-        --px44:4vw;
-        --px45:4.09090909090909vw;
-        --px46:4.18181818181818vw;
-        --px47:4.27272727272727vw;
-        --px48:4.36363636363636vw;
-        --px49:4.45454545454546vw;
-        --px50:4.54545454545455vw;
-        --px51:4.63636363636364vw;
-        --px52:4.72727272727273vw;
-        --px53:4.81818181818182vw;
-        --px54:4.90909090909091vw;
-        --px55:5vw;
-        --px56:5.09090909090909vw;
-        --px57:5.18181818181818vw;
-        --px58:5.27272727272727vw;
-        --px59:5.36363636363636vw;
-        --px60:5.45454545454546vw;
-        --px61:5.54545454545455vw;
-        --px62:5.63636363636364vw;
-        --px63:5.72727272727273vw;
-        --px64:5.81818181818182vw;
-        --px65:5.90909090909091vw;
-        --px66:6vw;
-        --px67:6.09090909090909vw;
-        --px68:6.18181818181818vw;
-        --px69:6.27272727272727vw;
-        --px70:6.36363636363636vw;
-        --px71:6.45454545454546vw;
-        --px72:6.54545454545455vw;
-        --px73:6.63636363636364vw;
-        --px74:6.72727272727273vw;
-        --px75:6.81818181818182vw;
-        --px76:6.90909090909091vw;
-        --px77:7vw;
-        --px78:7.09090909090909vw;
-        --px79:7.18181818181818vw;
-        --px80:7.27272727272727vw;
-        --px81:7.36363636363636vw;
-        --px82:7.45454545454546vw;
-        --px83:7.54545454545455vw;
-        --px84:7.63636363636364vw;
-        --px85:7.72727272727273vw;
-        --px86:7.81818181818182vw;
-        --px87:7.90909090909091vw;
-        --px88:8vw;
-        --px89:8.09090909090909vw;
-        --px90:8.18181818181818vw;
-        --px91:8.27272727272727vw;
-        --px92:8.36363636363636vw;
-        --px93:8.45454545454546vw;
-        --px94:8.54545454545454vw;
-        --px95:8.63636363636364vw;
-        --px96:8.72727272727273vw;
-        --px97:8.81818181818182vw;
-        --px98:8.90909090909091vw;
-        --px99:9vw;
-        --px100:9.09090909090909vw;
-        --px105:9.54545454545454vw;
-        --px106:9.63636363636364vw;
-        --px115:10.4545454545455vw;
-        --px125:11.3636363636364vw;
-        --px130:11.8181818181818vw;
-        --px135:12.2727272727273vw;
-        --px145:13.1818181818182vw;
-        --px150:13.6363636363636vw;
-        --px172:15.6363636363636vw;
-        --px190:17.2727272727273vw;
-        --px192:17.4545454545455vw;
-        --px225:20.4545454545455vw;
-        --px290:26.3636363636364vw;
-        --px296:26.9090909090909vw;
-        --px305:27.7272727272727vw;
-        --px314:28.5454545454545vw;
-        --px325:29.5454545454545vw;
-        --px335:30.4545454545455vw;
-        --px345:31.3636363636364vw;
-        --px410:37.2727272727273vw;
-        --px600:54.5454545454545vw;
-        --px680:61.8181818181818vw;
-        --px681:61.9090909090909vw;
-        --px938:85.2727272727273vw;
-        --px1020:92.7272727272727vw;
-        --px1045:95vw;
-        --px1100:100vw;
-        --px1101:100.090909090909vw;
-        }
-/*Spécifications pour l'utilisation des icones de font-awesome*/
-.fas{
-        margin:auto;
-        border-radius:var(--px50);
-}
-.fa-money-bill-wave{
-        color:var(--blue);
-        border-radius:var(--px50);
-        background-color:var(--bluecl);
-        vertical-align:middle;
-        padding: var(--px10);
-}
-.fa-child{
-        color:var(--blue);
-        border-radius:var(--px50);
-        background-color:var(--bluecl);
-        vertical-align:middle;
-        padding:var(--px10) var(--px12);
-}
-.fa-heart{
-        color:var(--blue);
-        border-radius:var(--px50);
-        background-color:var(--bluecl);
-        vertical-align:middle;
-        padding: var(--px10);
-}
-.fa-dog{
-        color:var(--blue);
-        border-radius:var(--px50);
-        background-color:var(--bluecl);
-        vertical-align:middle;
-        padding: var(--px10);
-}
-/*.fa-info{
-        color: var(--blue)  !important;
-        border-radius: var(--px50);
-        border: solid var(--grey) var(--px2);
-        border-collapse: collapse;
-        background-color: #fff;
-        margin: 0 var(--px11) 0 0;
-        text-align: center;
-        font-size: var(--px11);
-        padding: var(--px) var(--px4);
-}*/
-.fas.fa-chart-line {
-        margin: var(--px30) auto 0 auto;
-        padding: 0;
-        position: relative;
-        font-size: var(--px25);
-}
-.links:hover{
-        cursor:pointer;
-}
-/************************************* CSS RESERVIA MODE TABLETTE 680PX - 1100PX *************************************/
-/* Particularités de polices */
-h1{/*16pts (=21px) sur maquette 1440px*/
-        font-family:'ralewaymedium', sans-serif;
-        letter-spacing:0.014em;
-}
-.searchfont{/*12pts (=16px) sur maquette 1440px*/
-        font-size: var(--px16);
-}
-h4{
-        font-size:var(--px15);
-}
-/*** Spécification de la page en page générale ***/
-body{
-        width:94.6%;
-        margin:auto;
-        max-width:100vw;
-        padding:2.7%;
-}
-.container-fluid{
-        padding:0;
-        width:100%;
-        max-width: 100%;
-        margin:auto;
-}
-.page{
-        padding:0;
-        margin:auto;
-        width:100%;
-        max-width: 100%;
-}
-.fa-search{
-        display:none !important;
-}
-/*Spécifications de l'apparence du système de vote*/
-.hbgt-rating{
-        margin: 0;
-        padding: 0;
-        display:flex;
-        font-size:var(--px10);
-        position:relative;
-}
-.lpp-rating{
-        margin: 0;
-        padding: 0;
-        display:flex;
-        font-size:var(--px10);
-        position:relative;
-}
-.fa-star {
-        padding:1px;
-        margin:1px;
-        color:var(--grey2);
-}
-.starok{
-        color:var(--blue);
-}
-/************************************* PROPRIETES D'AFFICHAGE DES IMAGES *************************************/
-.logo {
-        max-width: var(--px96);
-        padding: var(--px12);
-}
-/***** HBGT ******/
-/*Les dimensions doivent être celle de dektop multiplier par 1.26*/
-/***** PROPRIETES D'AFFICHAGE DES IMAGES *****/
-
-/* Images des hébergements hbgt*/
-.image-hbgt{
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-}
-.imagecontainer-hbgt {
-        max-width: var(--px300);
-        width: 100%;
-        max-height: var(--px145);
-        height: 100%;
-        padding: 0;
-        overflow: hidden;
-        border-top-left-radius: var(--px15);
-        border-top-right-radius: var(--px15);
-    }
-/* Images des plus populaires lpp */
-/*=dimensions smartphone*/
-.imagecontainer-lpp{
-        width: 100%;
-        max-width: var(--px125);
-        height: 100%;
-        max-height: var(--px135);
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        border-top-left-radius: var(--px15);
-        border-bottom-left-radius: var(--px15);     
-}
-.image-lpp{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-}
-/* Images des activités actvt */
-/*=dimensions smartphone*/
-.imagecontainer-actvt{
-        max-width:var(--px335);
-        width: 100%;
-        max-height: var(--px135);
-        height: 100%;
-        padding: 0;
-        overflow: hidden;
-        border-top-left-radius: var(--px17);
-        border-top-right-radius: var(--px17);
-        border-radius: var(--px17);
-}
-.image-actvt{
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-}
-.actvtbtm.imagecontainer-actvt{
-        border-top-left-radius: 0 !important;
-        border-top-right-radius: 0 !important;
-        border-bottom-left-radius: var(--px17) !important;
-        border-bottom-right-radius: var(--px17) !important;
-}
-/************************************* ORGANISATION DES SECTIONS *************************************/
-/*Affichage des sections en columns-reverse Comme des le css smartphone: lpp -> Hébergments -> Activités*/
-/*** Propriété des sections ***/
-section{
-        display:flex;
-        flex-direction:column;
-}
-/*** Propriété du bloc des sections "Hébergements" et "les plus populaires" ***/
-.sections-blocks{
-        display:flex;
-        flex-direction: column-reverse;
-        grid-template-rows:auto 1fr;
-        padding:var(--px10);
-        margin:0;
-        gap:var(--px20);
-}
-/*** Affichage de la section des hébergements hbgt ***/
-.section-hbgt{
-        background-color: var(--grey);
-        padding: var(--px20);
-        border-radius: var(--px17);
-}
-/*** Affichage de la section des plus populaires lpp ***/
-.section-lpp {
-        background-color: var(--grey2);
-        padding: var(--px20);
-        border-radius: var(--px17);
-        box-shadow: 0 0 var(--px6) var(--greyshdw);
-        border-left:10px solid var(--blue);
-    }
-/*** Affichage de la section des activités ***/
-.section-actvt{
-        display: flex;
-        flex-direction: column;
-        padding: 0 var(--px5) var(--px40)var(--px5);
-}
-/*** Affichage des catégories = détails des sections ***/
-.category-hbgt{
-        padding: 0 0 0 var(--px2);
-        margin: 0;
-}
-.category-title{
-        padding: 0;
-}
-/************************************* DETAILS DES SECTIONS **************************************************/
-/************************************* SECTION DES PLUS POPULAIRES = lpp *************************************/
-.category-lpp {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        background-color: transparent;
-}
-.lpp-header{
-        display: grid;
-        grid-template-rows: auto 1fr;
-        margin: var(--px20) 0 0 var(--px-10);
-        padding: 0;
-        text-align: center;
-}
-.lpp-header h2 {
-        transform: rotate(270deg);
-        color: white;
-        margin: var(--px10) auto var(--px10) var(--px-30);
-        padding: 0;
-        text-align: right;
-    }
-.block-lpp-block{
-        display:grid;
-        grid-template-columns : 1fr 1fr 1fr;
-	padding: var(--px1) var(--px3);
-	gap: var(--px10);
-        
-}
-.lpp-block{
-        display:flex;
-        flex-wrap: nowrap;
-        max-width: var(--px305);
-	width: auto;
-        max-height:var(--px145) ;
-	height: auto;
-	padding: var(--px2);
-        border:solid white var(--px3);
-        background:white;
-        overflow:hidden;
-        border-radius:var(--px17);
-}
-.lpp-block:hover{
-        box-shadow: 0 0 var(--px6) var(--blue); 
-}
-.lpp-block-infos{
-        display:flex;
-        flex-direction:column;
-        max-width: var(--px150);
-        width:100%;
-        max-height: var(--px135);
-        height:100%;
-        background:white;
-        padding-left:var(--px14);
-        margin:auto;
-        text-align:left;
-}
-.lpp-title{
-	margin: var(--px14) 0 0 0;
-        padding:0;
-	
-}
-.lpp-desc{
-	padding: 0;
-	margin: var(--px14) 0 var(--px30) 0;
-}
-/************************************* SECTION DES HÉBERGEMENTS = hbgt ***************************************/
-/** Propriétés d'affichage du block constitué seulement par les blocks de chaque hébergement **/
-.block-hbgt-block{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: var(--px20);
-        padding: 0;
-        margin: var(--px10);
-}
-/* Propriétés d'affichage du block d'un hébergement*/
-.hbgt-block {
-        padding: var(--px7) var(--px7) 0 var(--px7);
-        box-shadow: 0 0 var(--px6) var(--greyshdw);
-        border-radius: var(--px17);
-        background: #fff;
-        max-width: var(--px314);
-        max-height: var(--px255);
-        width: 100%;
-        height: 100%;
-}
-.hbgt-block:hover{
-        box-shadow: 0 0 var(--px6) var(--blue); 
-}
-.hbgt-block-infos{
-        /*display:flex;
-        flex-direction:column;
-        padding:0 var(--px14);*/
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        max-height: var(--px85);
-}
-.hbgt-block h4{
-        font-size: var(--px18) !important;
-}
-.category-title.links {
-        margin: 0 0 var(--px10) var(--px10);
-    }
-.hbgt-title{
-        padding: var(--px1) 0 0 0;
-        margin: var(--px2) 0 var(--px2) var(--px5);
-}
-.hbgt-desc{
-        padding: 0;
-        margin: var(--px2) 0 var(--px2) var(--px5);
-}
-#afficherplus {
-        padding: var(--px10) 0 var(--px10) var(--px10);
-        margin: 0;
-    }
-#afficherplus h3 {
-        font-size: var(--px17) !important;
-        font-weight: bolder;
-        padding:var(--px20px) 0;
-}
-/************************************* SECTION DES ACTIVITÉS = actvt *****************************************/
-.block-actvt-block{
-        display: flex;
-        /*grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;*/
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: var(--px10);
-        padding:var(--px5);
-        margin: auto;
-        width:var(--px1045);
-        height:var(--px410);
-}
-/* Propriétés d'affichage du block d'un hébergement*/
-#activites{
-        border-top:solid thin var(--greyfont);
-}
-.actvt-block {
-        padding: 0;
-        box-shadow: 0 0 var(--px6) var(--greyshdw);
-        border-radius: var(--px17);
-        background: #fff;
-        display: inline-grid;
-        width: var(--px335);
-        max-width: 96%;
-        height:var(--px190);
-        border-radius: var(--px17);
-}
-.actvt-block:hover{
-        box-shadow: 0 0 var(--px6) var(--blue); 
-}
-#activites h2{
-        padding: var(--px15) 0;
-}
-.actitle{
-        padding: var(--px10) 0 var(--px10) var(--px20);
-        margin: 0;
-}
-.block-actvt-1row {
-        max-height: min-content;
-        display:flex;
-        height: 0;
-}
-.block-actvt-2rows {
-        max-height: min-content;
-        height: 0;
-        display:flex;
-}
-.actvtbtm{
-        display:flex;
-        flex-direction: column-reverse;
-
-        border-radius: var(--px17);     
-}
-.actvtbtm img {
-        /*border-bottom-left-radius: var(--px17) !important;
-        border-bottom-right-radius: var(--px17) !important;*/
-        border-radius: var(--px17);
-}
-/************************************* FIN DES DES SECTIONS **************************************************/
-
-/** Spécification de l'affichage du footer **/
-footer{
-        display:grid;
-        grid-template-columns:1fr 1fr 1fr;
-        padding:var(--px);
-        background:var(--grey);
-}
-.footer-links-block{
-        display:flex;
-        flex-direction:column;
-        margin:auto;
-        margin-left:0;
-        padding-left:0;
-        align-items: flex-start;
-        padding:var(--px20);
-}
-.footer-title{
-        padding-bottom:0;
-        margin-bottom:0;
-}
-.footer-links-list ul {
-        padding-left: 0;
-}
-.footer-links-list li{
-        margin-top:var(--px5);
-        margin-bottom:var(--px5);
-        list-style: none;
-}
-.footer-links-list a{
-        text-decoration: none;
-}
-/** Fin de spécifications du footer **/
-/** CHAMPS CACHÉS **/
-.dktpaimg{
-        display:none;
-}
-.header-tbtt{
-        display:none;
-}
-.fa-smart{
-        display:none !important;
-}
-.hdn-class-dsktp{
-        display:none;
-}
-}
-/*Spécifications pour l'utilisation des icones de font-awesome*/
-/****** FIN DU CSS TABLETTES MIN WIDTH 681PX MAX WIDTH 1101PX ******/
