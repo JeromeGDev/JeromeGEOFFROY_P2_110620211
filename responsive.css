@@ -377,6 +377,7 @@ form {
         min-height: var(--px50);
         display: inline-grid;
         margin: auto 0;
+        align-items: center;
 }
 #Recherchertxt {
         padding: 0;
@@ -384,8 +385,7 @@ form {
 }
 #Recherchertxt a{
         padding: 0;
-        margin: var(--px18) auto;
-        padding: 0;
+        margin: auto;
 }
 label {
         color: white;
