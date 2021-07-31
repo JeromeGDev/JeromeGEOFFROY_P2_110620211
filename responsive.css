@@ -2488,7 +2488,7 @@ footer {
         flex-direction:column;
         margin:auto;
         margin:0;
-        padding:0 0 0 var(--px5);
+        padding:var(--px20) 0 0 var(--px5);
         align-items: flex-start;
 }
 .footer-title{
