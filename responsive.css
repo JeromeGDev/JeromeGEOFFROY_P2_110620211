@@ -345,7 +345,7 @@ form {
 }
 .fa-cont-r:hover{
         background-color:var(--grey2);
-        border: var(--px2) solid var(--grey2);;
+        border: var(--px2) solid var(--grey2);
 }
 .fa-search {
         margin: auto;
@@ -883,8 +883,8 @@ section{
         margin: 0;
 }
 #afficherplus h3 {
-        font-size: var(--px17) !important;
-        font-size:1.0625em;
+        /*font-size: var(--px17)*/
+        font-size:1.0625em !important;
         font-weight: bolder;
         }
 /****** SECTION : LES PLUS POPULAIRES ******/
@@ -1524,7 +1524,7 @@ section{
         max-height: var(--px85);
 }
 .hbgt-block h4{
-        /*font-size: var(--px18);*/ ;
+        /*font-size: var(--px18);*/
         font-size:1.125em !important;
 }
 .category-title.links {
@@ -1544,7 +1544,7 @@ section{
     }
 #afficherplus h3 {
         /*font-size: var(--px17)*/
-        font-size:1.0625em !important;;
+        font-size:1.0625em !important;
         font-weight: bolder;
         padding:var(--px20px) 0;
 }
@@ -1948,7 +1948,7 @@ header {
         width: 100%;
         padding: 0;
         margin:auto;
-        height:var(--px109);
+        height:var(--px112);
 }
 nav {
         padding: 0;
@@ -1984,8 +1984,12 @@ nav {
 #inscription {
         color: var(--blue);
         font-weight: 700;
-        border:none;
-        margin:auto;
+        border: none;
+        margin: auto;
+        display: inline-grid;
+        height: var(--px56);
+        margin: var(--px19) 0;
+        padding: 0;
 }
 #inscription:hover {
         color: var(--grey2) !important;
