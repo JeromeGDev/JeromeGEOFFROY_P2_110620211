@@ -472,7 +472,7 @@ label {
         float:right;
         position: relative;*/
         float: right;
-        margin: auto 0 auto auto;
+        margin: auto 0 auto auto !important;
         padding: 0;
         /*font-size: var(--px20);*/
         font-size:1.25em;
