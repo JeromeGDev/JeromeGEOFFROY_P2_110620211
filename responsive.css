@@ -113,7 +113,7 @@ h4{/*12pts (=16px) sur maquette 375px*/
 }
 h5{/*13pts (=17px) sur maquette 375px*/
         font-family:'ralewayregular', sans-serif;
-        font-size:0.8125em;
+        font-size:1.0625em;
         font-weight:700;
         color:black;
         padding: 0;
@@ -1901,6 +1901,7 @@ body {
         max-width: 100%;
         margin: 0;
         padding:0;
+        font-size: 16px;
 }
 .container-fluid {
         max-width: 100vw;
@@ -2507,20 +2508,14 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
-        margin: 0 var(--px-20) var(--px-20) var(--px-20);
-        padding: var(--px20) 0 var(--px20) var(--px25);
+        margin: 0 var(--px-30) var(--px-20) var(--px-20);
+        padding: var(--px45) 0 var(--px20) var(--px25);
         background: var(--grey);
-}
-.firstbck{
-        display:flex;
-        flex-direction:column;
-        margin:var(--px25) 0 var(--px18) 0;
-        padding: var(--px5) 0 0 0 !important;
 }
 .footer-links-block{
         display:flex;
         flex-direction:column;
-        margin:var(--px18) 0;
+        margin:0 0 10% 0;
         padding:0 0 0 0;
 }
 .footer-title{
@@ -2536,7 +2531,7 @@ footer {
 }
 .footer-links-list li{
         list-style: none;
-        margin:0 0 4% 0;
+        margin:0 0 3.5% 0;
         }
 .footer-links-list a{
         text-decoration: none;
@@ -2544,38 +2539,7 @@ footer {
         margin: 0;
         padding: 0;
 }
-/* FOOTER ORIGINAL
-footer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin: 0 var(--px-20) 0 var(--px-20);
-        padding: var(--px20) 0 0 var(--px20);        
-        background: var(--grey);
-}
-.footer-links-block{
-        display:flex;
-        flex-direction:column;
-        margin:auto;
-        margin:0;
-        padding:var(--px20) 0 0 var(--px5);
-        align-items: flex-start;
-}
-.footer-title{
-        margin-bottom:0;
-}
-.footer-links-list ul {
-        padding-left: 0;
-}
-.footer-links-list li{
-        list-style: none;
-        margin-bottom: var(--px17);
-        }
-.footer-links-list a{
-        text-decoration: none;
-        font-weight:300;
-}*/
-/** Fin de spécifications du footer **/
+
 /** CHAMPS CACHÉS **/
 .dktpaimg{
         display:none;
