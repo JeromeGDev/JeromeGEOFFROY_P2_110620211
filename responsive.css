@@ -87,18 +87,26 @@ h2{/*16pts (21px) sur maquette 375px*/
         padding: 0;
         margin: 0;   
 }
-h3{/*13pts (=17px) sur maquette 375px*/
+/*h3{13pts (=17px) sur maquette 375px
         font-family:'ralewayregular', sans-serif;
         font-size:1.0625em;
         font-weight:700;
         color:#000;
         padding: 0;
         margin: 0;
-}
-h4{/*12pts (=16px) sur maquette 375px*/
+}*/
+h3{/*12pts (=16px) sur maquette 375px*/
         font-family: 'ralewaybold', sans-serif;
         font-size:1em;
         font-weight:500;
+        color:#000;
+        padding: 0;
+        margin: 0; 
+}
+h4{/*12pts (=16px) sur maquette 375px*/
+        font-family:'ralewayregular', sans-serif;
+        font-size:1.0625em;
+        font-weight:700;
         color:#000;
         padding: 0;
         margin: 0;
@@ -223,11 +231,14 @@ a:focus{
         margin:var(--px23) 0 0 0;
 }
 .site-subtitle{
+        font-family: 'ralewayregular', sans-serif;
+        font-size: 1em;
+        font-weight: 500;
+        color: black;
         display: grid;
         grid-template-columns: 1fr;
         padding: 0;
-        margin:0;
-        margin-top:var(--px10);
+        margin: var(--px10) 0 0 0;
 }
 /* Fin de configuration du Header*/
 /*** Style CSS de la navigation ***/
@@ -400,8 +411,15 @@ label {
         display: inline-flex;
 }
 .filter-title{
-        padding-right:var(--px20);
+        padding-right: var(--px20);
         font-weight: 700 !important;
+        font-family: 'ralewayregular', sans-serif;
+        font-size: 1.0625em;
+        font-weight: 700;
+        color: black;
+        padding: 0;
+        padding-right: 0px;
+        margin: 0;
 }
 #filtres h3{
         margin-top:auto;
@@ -430,10 +448,21 @@ label {
         display: flex;
         margin-top: 0;
 }
-.site-info span {
+.site-info-txt {
+        font-family: 'ralewayregular', sans-serif;
+        font-size: 1em;
         font-weight: 500;
-        margin:0;
-        padding:0;
+        color: black;
+        padding: 0;
+        margin: 0;
+}
+.site-info span {
+        font-family: 'ralewayregular', sans-serif;
+        font-size: 1em;
+        font-weight: 500;
+        color: black;
+        padding: 0;
+        margin: 0;
 }
 /************************************* FIN DE HEADER DU DESKTOP *************************************/
 /*Spécifications pour l'utilisation des icones de font-awesome*/
@@ -879,7 +908,7 @@ section{
         margin: 0;
         padding: var(--px10) 0 0 0;
 }
-#afficherplus h3 {
+#afficherplus h4 {
         /*font-size: var(--px17)*/
         font-size:1.125em !important;
         font-weight: bolder;
@@ -979,7 +1008,7 @@ section{
 .actvt-block h2{
         padding: var(--px20);
 }
-h4.actitle {
+h3.actitle {
         padding: 0;
         margin: var(--px20) 0 var(--px20) var(--px14);
 }
@@ -1238,7 +1267,7 @@ footer {
         padding: var(--px) var(--px4);
 }*/
 .fas.fa-chart-line {
-        margin: var(--px30) auto 0 auto;
+        margin: var(--px30) auto 0 auto !important;
         padding: 0;
         position: relative;
         /*font-size: var(--px25);*/
@@ -1384,6 +1413,7 @@ body{
 section{
         display:flex;
         flex-direction:column;
+        padding-top:var(--px30);
 }
 /*** Propriété du bloc des sections "Hébergements" et "les plus populaires" ***/
 .sections-blocks{
@@ -1539,7 +1569,7 @@ section{
         padding: var(--px10) 0 var(--px10) var(--px10);
         margin: 0;
     }
-#afficherplus h3 {
+#afficherplus h4 {
         /*font-size: var(--px17)*/
         font-size:1.0625em !important;
         font-weight: bolder;
