@@ -111,7 +111,7 @@ h4{/*12pts (=16px) sur maquette 375px*/
         padding: 0;
         margin: 0;
 }
-h5{/*13pts (=13px) sur maquette 375px*/
+h5{/*13pts (=17px) sur maquette 375px*/
         font-family:'ralewayregular', sans-serif;
         font-size:0.8125em;
         font-weight:700;
@@ -823,7 +823,7 @@ body {
         padding: 0;
 }
 .imagecontainer-actvt:hover{
-        box-shadow: 0 var(--px-6) var(--px6) var(--greyshdw);
+        box-shadow: var(--px-6) var(--px6) var(--greyshdw);
         cursor:pointer;
 }
 /*** Propriété des sections ***/
@@ -1853,6 +1853,7 @@ footer{
         --px150:40vw;
         --px172:45.8666666666667vw;
         --px178:47.4666666666667vw;
+        --px190:50.6666666666667vw;
         --px192:51.2vw;
         --px290:77.3333333333333vw;
         --px325:86.6666666666667vw;
@@ -2253,7 +2254,7 @@ section {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
-        padding: 0;
+        padding: 0 0 var(--px30) 0;
         margin: 0;
 }
 /*** Propriété des sections "Hébergements" et "les plus populaires" ***/
@@ -2283,7 +2284,7 @@ section {
         display: flex;
         flex-direction: column;
         padding: 0 0 var(--px26) 0;
-        margin:0 0 var(--px20) 0;
+        margin:0;
 }
 /****** SECTION : LES PLUS POPULAIRES ******/
 /*** Détail de l'affichage de la section les plus populaires lpp ***/
@@ -2467,7 +2468,7 @@ section {
 /****** SECTION : ACTIVITÉS ******/
 /*** Détail de l'affichage de la section Activités ***/
 #activites h2{
-        padding:0 0 var(--px30) 0;
+        padding:0 0 var(--px10) 0;
 }
 .block-actvt-block{
         display:flex;
@@ -2488,7 +2489,7 @@ section {
         flex-direction: column;
         box-shadow : 0 6px 6px var(--greyshdw);
         border-radius: var(--px14);
-        margin:0 0 var(--px20) 0;
+        margin:var(--px20) 0 0  0;
         width:var(--px335);
         height:var(--px190);
         box-shadow:0 0 6px var(--greyshdw);
@@ -2505,8 +2506,50 @@ section {
 footer {
         display: grid;
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        margin: 0 var(--px-20) var(--px-20) var(--px-20);
+        padding: var(--px20) 0 var(--px20) var(--px25);
+        background: var(--grey);
+}
+.firstbck{
+        display:flex;
+        flex-direction:column;
+        margin:var(--px25) 0 var(--px18) 0;
+        padding: var(--px5) 0 0 0 !important;
+}
+.footer-links-block{
+        display:flex;
+        flex-direction:column;
+        margin:var(--px18) 0;
+        padding:0 0 0 0;
+}
+.footer-title{
+        margin: 0 0 var(--px20) 0;
+}
+.footer-links-list {
+        margin: 0;
+        padding: 0;
+    }
+.footer-links-list ul {
+        margin: 0;
+        padding: 0;
+}
+.footer-links-list li{
+        list-style: none;
+        margin:0 0 4% 0;
+        }
+.footer-links-list a{
+        text-decoration: none;
+        font-weight:300;
+        margin: 0;
+        padding: 0;
+}
+/* FOOTER ORIGINAL
+footer {
+        display: grid;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        margin: var(--px10) var(--px-20) 0 var(--px-20);
+        margin: 0 var(--px-20) 0 var(--px-20);
         padding: var(--px20) 0 0 var(--px20);        
         background: var(--grey);
 }
@@ -2526,12 +2569,12 @@ footer {
 }
 .footer-links-list li{
         list-style: none;
-        margin-bottom: var(--px18);
+        margin-bottom: var(--px17);
         }
 .footer-links-list a{
         text-decoration: none;
         font-weight:300;
-}
+}*/
 /** Fin de spécifications du footer **/
 /** CHAMPS CACHÉS **/
 .dktpaimg{
